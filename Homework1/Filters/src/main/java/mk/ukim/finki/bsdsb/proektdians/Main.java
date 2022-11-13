@@ -1,11 +1,8 @@
 package mk.ukim.finki.bsdsb.proektdians;
 import mk.ukim.finki.bsdsb.proektdians.filters.AlpineHut.*;
 import mk.ukim.finki.bsdsb.proektdians.filters.CampSite.*;
-import mk.ukim.finki.bsdsb.proektdians.filters.GlobalFilters.GHAHUnnecessaryColumnsAtTheEndFilter;
-import mk.ukim.finki.bsdsb.proektdians.filters.GlobalFilters.GHAHRemovePostCodeFilter;
-import mk.ukim.finki.bsdsb.proektdians.filters.GlobalFilters.IncompleteDataFilter;
+import mk.ukim.finki.bsdsb.proektdians.filters.GlobalFilters.*;
 import mk.ukim.finki.bsdsb.proektdians.filters.GuestHouse.*;
-import mk.ukim.finki.bsdsb.proektdians.filters.Hotel.HotelIncompleteDataFilter;
 import mk.ukim.finki.bsdsb.proektdians.filters.Hotel.HotelRemoveFromMiddleTierFilter;
 
 import java.io.*;
@@ -35,19 +32,20 @@ public class Main {
         Pipe<String> hotelPipe = new Pipe<>();
         Pipe<String> campSitePipe = new Pipe<>();
 
-        IncompleteDataFilter incompleteDataFilter = new IncompleteDataFilter();
+        IncompleteDataFilter incompleteDataFilter = new IncompleteDataFilter(7);
         AlpineHutRemoveUnnecesarryColumnsInTheMiddleFilter alpineHutRemoveTourismAndBuildingFilter = new AlpineHutRemoveUnnecesarryColumnsInTheMiddleFilter();
-        AlpineHutUnnecessaryColumnsAtTheEndFilter alpineHutUnnecessaryColumnsAtTheEndFilter = new AlpineHutUnnecessaryColumnsAtTheEndFilter();
+        UnnecessaryColumnsAtTheEndFilter alpineHutUnnecessaryColumnsAtTheEndFilter = new UnnecessaryColumnsAtTheEndFilter(16);
         GHAHRemovePostCodeFilter ghahRemovePostCodeFilter = new GHAHRemovePostCodeFilter();
         GHRemoveTourismAndBuildingFilter ghRemoveTourismAndBuildingFilter = new GHRemoveTourismAndBuildingFilter();
         GHRemoveCountryAndWebsiteFilter ghRemoveCountryAndWebsiteFilter = new GHRemoveCountryAndWebsiteFilter();
-        GHAHUnnecessaryColumnsAtTheEndFilter ghahUnnecessaryColumnsAtTheEndFilter = new GHAHUnnecessaryColumnsAtTheEndFilter();
+        UnnecessaryColumnsAtTheEndFilter ghahUnnecessaryColumnsAtTheEndFilter = new UnnecessaryColumnsAtTheEndFilter(14);
         CampSiteRemoveUnnecesarryColumnsInTheMiddleFilter campSiteRemoveUnnecesarryColumnsInTheMiddleFilter = new CampSiteRemoveUnnecesarryColumnsInTheMiddleFilter();
-        CampSiteUnnecessaryColumnsAtTheEndFilter campSiteUnnecessaryColumnsAtTheEndFilter = new CampSiteUnnecessaryColumnsAtTheEndFilter();
-        WebSiteStripFilter webSiteStripFilter = new WebSiteStripFilter();
-        CampSiteIncompleteDataFilter campSiteIncompleteDataFilter = new CampSiteIncompleteDataFilter();
+        UnnecessaryColumnsAtTheEndFilter campSiteUnnecessaryColumnsAtTheEndFilter = new UnnecessaryColumnsAtTheEndFilter(10);
+        WebSiteStripFilter webSiteStripFilter = new WebSiteStripFilter(8, 3);
+        IncompleteDataFilter campSiteIncompleteDataFilter = new IncompleteDataFilter(8);
         HotelRemoveFromMiddleTierFilter hotelRemoveFromMiddleTierFilter = new HotelRemoveFromMiddleTierFilter();
-        HotelIncompleteDataFilter hotelIncompleteDataFilter = new HotelIncompleteDataFilter();
+        IncompleteDataFilter hotelIncompleteDataFilter = new IncompleteDataFilter(9);
+        WebSiteStripFilter hotelWebSiteStripFilter = new WebSiteStripFilter(9, 6);
 
         alpineHutPipe.addFilter(alpineHutUnnecessaryColumnsAtTheEndFilter);
         alpineHutPipe.addFilter(alpineHutRemoveTourismAndBuildingFilter);
@@ -62,6 +60,7 @@ public class Main {
         hotelPipe.addFilter(ghahUnnecessaryColumnsAtTheEndFilter);
         hotelPipe.addFilter(hotelRemoveFromMiddleTierFilter);
         hotelPipe.addFilter(hotelIncompleteDataFilter);
+        hotelPipe.addFilter(hotelWebSiteStripFilter);
 
         campSitePipe.addFilter(campSiteUnnecessaryColumnsAtTheEndFilter);
         campSitePipe.addFilter(campSiteRemoveUnnecesarryColumnsInTheMiddleFilter);

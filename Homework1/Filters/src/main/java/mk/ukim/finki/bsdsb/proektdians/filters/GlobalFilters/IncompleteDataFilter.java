@@ -4,6 +4,12 @@ import mk.ukim.finki.bsdsb.proektdians.Filter;
 import java.util.*;
 
 public class IncompleteDataFilter implements Filter<String> {
+    private int columns;
+
+    public IncompleteDataFilter(int columns) {
+        this.columns = columns;
+    }
+
     @Override
     public String execute(String input) {
         String[] fields = input.split(",");
@@ -17,7 +23,7 @@ public class IncompleteDataFilter implements Filter<String> {
                 return "";
             }
         }
-        if(list.size()!=7)
+        if(list.size()!=columns)//7
         {
             return "";
         }

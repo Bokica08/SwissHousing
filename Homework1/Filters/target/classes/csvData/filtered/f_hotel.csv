@@ -1,63 +1,62 @@
 X,Y,name,addr:housenumber,addr:street,addr:city,website,phone,stars
-7.11674994025883,46.1395005221324,Hôtel de Fully,16,Rue de l'Eglise,Fully,http://hotel-de-fully.ch/,+41 27 746 13 59,3
-7.7516817,46.02591,Alpen Resort Hotel,52,Spissstrasse,Zermatt,http://alpenresort.com,+41279663000,4
-7.75181860579095,46.0261860001408,Alpen Resort Hotel,52,Spissstrasse,Zermatt,http://alpenresort.com,+41279663000,4
-7.92921513750836,46.1111279501593,Hotel Allalin Saas-Fee,7,Lomattenstrasse,Saas-Fee,https://www.allalin.ch/,+41 27 958 10 00,4
-6.5673992539407,46.5374905558644,Hotel des Inventions,2,Chemin du Parc,Ecublens (VD),https://www.hotel-inventions.ch,+41 21 694 39 39,3
-6.63093394939786,46.5194741300495,Lausanne Palace,7-9,Rue du Grand-Chêne,Lausanne,https://www.lausanne-palace.ch,+41 2 13 31 31 31,5
-6.65784323487238,46.5404583489219,Aquatis Hotel,148,Route de Berne,Lausanne,http://www.aquatis-hotel.ch/,+41 21 654 24 24,3
-6.85698085,46.4614698,Le Léman,20,Route de Blonay,Vevey,http://www.lelemanhotel.ch/,+41219443322,3
-6.5479702,46.80685105,"Hotel de l'Ours,hotel,7,1445,CH,http://www.hotelours.ch,restaurant
-6.93613323126014,46.9962755500352,Hôtel Alpes et Lac,2,Place de la Gare,Neuchâtel,https://www.alpesetlac.ch/,+41 32 723 19 19,3
-6.9570465372941,47.2238538935933,Georges Wenger,2,Rue de la Gare,Le Noirmont,http://www.georges-wenger.ch,+4132 957 66 33,4
-7.27495067419383,46.6658390036164,Schwarzsee Bad,89,Seestrasse,Schwarzsee,http://www.badschwarzsee.ch,+41 26 4121104,3
-7.63414958624396,46.7449860056315,Congress Hotel Seepark,47,Seestrasse,Thun,https://www.seepark.ch/,+41 33 2261212,4
-7.85223548155272,46.6840964653104,Bernerhof,18,Bahnhofstrasse,Interlaken,http://www.bestwestern-bernerhof.ch,+41 33 826 76 76,3
-7.85303823397294,46.6845002491605,Hotel Krebs,4,Bahnhofstrasse,Interlaken,https://www.krebshotel.ch/,+41 33 826 03 30,4
-7.85035118273886,46.6872663288586,Aarburg,1,Beatenbergstrasse,Unterseen,http://www.hotel-aarburg.ch,+41 33 822 26 15,2
-7.85922853053288,46.6830671955185,Derby,70,Jungfraustrasse,Interlaken,https://www.hotel-derby-interlaken.ch/,+41 33 822 19 41,3
-7.86229898546725,46.6816588372732,Landgasthof Hirschen,11,Hauptstrasse,Matten bei Interlaken,https://hirschen-interlaken.ch/,+41 33 822 15 45,3
-8.30225404685797,47.050776751674,Hotel Baslertor Luzern,12,Pfistergasse,Luzern,https://baseltor.ch/,+41 41 249 22 22,4
-8.31967196021992,47.0563425460157,Art Deco Hotel Montana,22,Adligenswilerstrasse,Luzern,https://www.hotel-montana.ch/,+41 41 419 00 00,4
-8.40232420052894,47.0267320557767,Campus Hotel Hertenstein,156,Hertensteinstrasse,Weggis,https://www.campus-hotel-hertenstein.ch/,+41 41 399 71 71,4
-8.43104798432588,47.0316302489904,Garni Hotel Frohburg,21,Seestrasse,Weggis,https://frohburg.ch,+41413920060,3
-8.43662612128985,47.0319779999457,Beau Rivage,6,Gotthardstrasse,Weggis,https://www.beaurivage-weggis.ch/,+41 (0)41 392 79 00,4
-7.53623548126116,47.5498700614532,Hotel Schlüssel,1,Mühlebachweg,Allschwil,https://www.schluessel-allschwil.ch/,+41 61 481 00 40,3
-7.65815998982013,47.6118408084975,STADT-Hotel,2,Weinbrennerstraße,Lörrach,https://www.stadthotel-loerrach.de/,+49 7621 40090,3
-8.05041592357534,47.3916789387644,Sorell Hotel Aarauerhof,2,Bahnhofplatz,Aarau,http://www.aarauerhof.ch/,+41 62 837 83 00,3
-8.3774144677213,47.4179828542335,Hilton Garden Inn Zurich Limmattal,5,Kreuzäckerstrasse,Spreitenbach,https://hiltongardeninn3.hilton.com/en/hotels/switzerland/hilton-garden-inn-zurich-limmattal-ZRHSPGI/index.html?WT.mc_id=zVSEC0CH1GI2NaturalSearch3GoogleMyBusiness4Luau-zurich_Aug56ZRHSPGI7EN8i1,+41 56 404 40 40,4
-8.28884385772793,47.5881194999843,Hotel Zurzacherhof,5,Dr. Martin Erb-Strasse,Bad Zurzach,https://www.badzurzach.info/d/gastbetriebe/hotel/Hotel-Zurzacherhof,+41 56 265 22 22,3
-8.28791881869228,47.5889892956379,Hotel zur Therme,30-31,Quellenstrasse,Bad Zurzach,https://www.thermalquelle.ch/hotels/hotel-zur-therme/,+41 56 265 22 22,3
-8.28836694782517,47.5895091500531,Tenedo Hotel,32,Quellenstrasse,Bad Zurzach,https://www.thermalquelle.ch,+41 56 265 22 22,3
-8.28951495380782,47.5914398664411,Park-Hotel Bad Zurzach,44,Badstrasse,Bad Zurzach,https://www.park-hotel-zurzach.ch/,+41 56 269 88 11,4
-8.94335098283651,45.9923452501126,Hotel De La Paix,18,Viale Giuseppe Cattori,Lugano,https://www.delapaix.ch/,+41 91 960 60 60,4
-8.96721785,46.0068816,Hotel Atlantico,12,Via Concordia,Lugano,https://www.atlantico-lugano.ch/,+41 919712921,2
-8.80510134694113,46.1716421149642,Ramada La Palma au Lac,29,Viale Verbano,Locarno,http://www.ramada.com/hotels/switzerland/locarno/ramada-la-palma-au-lac-locarno/hotel-overview,+41 91 7353636,4
-9.18189413175746,46.6224175138088,7132 Hotel,560,Poststrasse,vals,http://www.7132.ch,+41 58 7132 000,5
-9.6492288097953,46.4689658735086,Hotel Solaria,113,Julierstrasse,Bivio,http://www.hotelsolariabivio.ch/,+41 81 6845107,3
-9.64943866069707,46.4694580999157,Hotel Grischuna,26,Vea Valetta,Bivio,http://www.grischuna-bivio.ch/,+41 81 6591212,3
-9.76145606943819,46.4283995419182,Hotel Waldhaus,3,Via da Fex,Sils-Maria,https://waldhaus-sils.ch/,+41 81 8 38 51 00,5
-9.81977652857106,46.4848588586512,Suvretta House,1,Via Chasellas,St. Moritz,https://www.suvrettahouse.ch/,+41 81 836 36 36,5
-9.59084460526305,46.5975434043771,Cube Savognin,12,Veia Sandeilas,Savognin,http://www.cube-savognin.ch/,+41 81 6591414,3
-9.2823866,47.0931453,Hotel Cristal,3,Molseralp,Tannenboden,https://www.cristal-flumserberg.ch/,+41 81 720 16 16,3
-9.54405227136946,46.7784441503023,Hotel Restaurant Hemmi,135,Hauptstrasse,Churwalden,https://www.hotel-hemmi.ch/,+41 81 382 03 03,3
-9.83193218459468,46.8014887910718,Hilton Garden Inn Davos,103,Promenade,Davos,http://www.davos.hgi.com,+41 81 414 55 55,4
-9.83914831512679,46.8090319769965,Hotel Seehof Davos,159,Promenade,Davos,https://www.seehofdavos.ch/,+41 81 417 94 44,5
-9.5039033020262,47.0004384004597,Grand Resort Bad Ragaz,8,Pfäferserstrasse,Bad Ragaz,https://www.resortragaz.ch/,+41 81 3033030,5
-8.57885872846769,47.3192124704816,Romantik Seehotel Sonne,120,Seestrasse,Küsnacht,https://sonne.ch/,+41 44 914 18 18,4
-8.54394124955262,47.4108271500079,Swissôtel Zürich,44,Schulstrasse,Zürich,http://www.swissotel.com/hotels/zurich/,+41 44 317 31 11,4
-8.56281075500567,47.4388589250307,Ibis Budget Zürich Airport,45,Flughofstrasse,Glattbrugg,http://www.ibis.com/de/hotel-8480-ibis-budget-zurich-airport/index.shtml,+41 44 828 10 50,1
-8.56889421757478,47.4394721769393,Mövenpick Hotel Zürich Airport,8,Walter Mittelholzerstrasse,Glattbrugg,https://www.movenpick.com/en/europe/switzerland/zurich/hotel-zurich-airport/,+41 44 808 88 88,4
-8.57153770019784,47.4368002255994,Hilton Zurich Airport,10,Hohenbühlstrasse,Opfikon,https://www3.hilton.com/en/hotels/switzerland/hilton-zurich-airport-ZRHHITW/index.html?WT.mc_id=zELWAKN0EMEA1HI2DMH3LocalSearch4DGGenericx6ZRHHITW,+41 44 828 50 50,4
-8.68763763348543,47.695565799133,Hotel Restaurant Alte Rheinmühle,93,Junkerstraße,Büsingen am Hochrhein,https://www.alte-rheinmuehle.ch/,+41 52 625 25 50,3
-9.05871178250872,47.6218078501338,Wellnesshotel Golfpanorama,6,Golfpanorama,Lipperswil,https://www.golfpanorama.ch/,+41 71 511 06 80,4
-9.53368461321759,47.4457328571565,Hotel Heiden,8,Seeallee,Heiden,https://www.hotelheiden.ch,+41 71 898 15 15,4
-9.43359028204788,47.5163808996617,Restaurant Römerhof,3,Freiheitsgasse,Arbon,http://www.roemerhof-arbon.ch,+41 71 447 30 30,4
-9.17489235842683,47.6573429975482,Hotel Hirschen,9,Bodanplatz,Konstanz,http://www.hirschen-konstanz.de,+49 7531 128260,3
-9.20435358844473,47.6384290998682,Ziil,4,Lengwilerstrasse,Kreuzlingen,http://www.ziil-hotel.ch,+41 71 686 70 70,3
-9.68687760803524,47.4900743450714,Hotel am See,1,Uferstraße,Hard,https://www.hotelamsee.biz/,+43 5574 63000,4
-9.90083482423954,46.4935234181295,Grand Hotel Kronenhof,130,Via Maistra,Pontresina,https://www.kronenhof.com/,+41 81 830 30 30,5
-9.84960214672429,46.7206342500389,Walserhuus,34,Sertigerstrasse,Davos Sertig,https://www.walserhuus.ch/,+41 81 410 60 30,3
-10.4644914,46.64601965,Natur-Aktiv-Hotel Lamm,37,St. Johann-Straße - Via S. Giovanni,Taufers im Münstertal - Tubre,https://www.hotel-lamm.com/,+39 0473 832168,4
-10.4649919455507,46.6465370498649,Hotel Chavalatsch,31,St. Johann-Straße - Via S. Giovanni,Taufers im Münstertal - Tubre,http://www.chavalatsch.com/,+39 0473 832175,3
+7.11674994025883,46.1395005221324,Hôtel de Fully,16,Rue de l'Eglise,Fully,hotel-de-fully.ch,+41 27 746 13 59,3
+7.7516817,46.02591,Alpen Resort Hotel,52,Spissstrasse,Zermatt,alpenresort.com,+41279663000,4
+7.75181860579095,46.0261860001408,Alpen Resort Hotel,52,Spissstrasse,Zermatt,alpenresort.com,+41279663000,4
+7.92921513750836,46.1111279501593,Hotel Allalin Saas-Fee,7,Lomattenstrasse,Saas-Fee,www.allalin.ch,+41 27 958 10 00,4
+6.5673992539407,46.5374905558644,Hotel des Inventions,2,Chemin du Parc,Ecublens (VD),www.hotel-inventions.ch,+41 21 694 39 39,3
+6.63093394939786,46.5194741300495,Lausanne Palace,7-9,Rue du Grand-Chêne,Lausanne,www.lausanne-palace.ch,+41 2 13 31 31 31,5
+6.65784323487238,46.5404583489219,Aquatis Hotel,148,Route de Berne,Lausanne,www.aquatis-hotel.ch,+41 21 654 24 24,3
+6.85698085,46.4614698,Le Léman,20,Route de Blonay,Vevey,www.lelemanhotel.ch,+41219443322,3
+6.93613323126014,46.9962755500352,Hôtel Alpes et Lac,2,Place de la Gare,Neuchâtel,www.alpesetlac.ch,+41 32 723 19 19,3
+6.9570465372941,47.2238538935933,Georges Wenger,2,Rue de la Gare,Le Noirmont,www.georges-wenger.ch,+4132 957 66 33,4
+7.27495067419383,46.6658390036164,Schwarzsee Bad,89,Seestrasse,Schwarzsee,www.badschwarzsee.ch,+41 26 4121104,3
+7.63414958624396,46.7449860056315,Congress Hotel Seepark,47,Seestrasse,Thun,www.seepark.ch,+41 33 2261212,4
+7.85223548155272,46.6840964653104,Bernerhof,18,Bahnhofstrasse,Interlaken,www.bestwestern-bernerhof.ch,+41 33 826 76 76,3
+7.85303823397294,46.6845002491605,Hotel Krebs,4,Bahnhofstrasse,Interlaken,www.krebshotel.ch,+41 33 826 03 30,4
+7.85035118273886,46.6872663288586,Aarburg,1,Beatenbergstrasse,Unterseen,www.hotel-aarburg.ch,+41 33 822 26 15,2
+7.85922853053288,46.6830671955185,Derby,70,Jungfraustrasse,Interlaken,www.hotel-derby-interlaken.ch,+41 33 822 19 41,3
+7.86229898546725,46.6816588372732,Landgasthof Hirschen,11,Hauptstrasse,Matten bei Interlaken,hirschen-interlaken.ch,+41 33 822 15 45,3
+8.30225404685797,47.050776751674,Hotel Baslertor Luzern,12,Pfistergasse,Luzern,baseltor.ch,+41 41 249 22 22,4
+8.31967196021992,47.0563425460157,Art Deco Hotel Montana,22,Adligenswilerstrasse,Luzern,www.hotel-montana.ch,+41 41 419 00 00,4
+8.40232420052894,47.0267320557767,Campus Hotel Hertenstein,156,Hertensteinstrasse,Weggis,www.campus-hotel-hertenstein.ch,+41 41 399 71 71,4
+8.43104798432588,47.0316302489904,Garni Hotel Frohburg,21,Seestrasse,Weggis,frohburg.ch,+41413920060,3
+8.43662612128985,47.0319779999457,Beau Rivage,6,Gotthardstrasse,Weggis,www.beaurivage-weggis.ch,+41 (0)41 392 79 00,4
+7.53623548126116,47.5498700614532,Hotel Schlüssel,1,Mühlebachweg,Allschwil,www.schluessel-allschwil.ch,+41 61 481 00 40,3
+7.65815998982013,47.6118408084975,STADT-Hotel,2,Weinbrennerstraße,Lörrach,www.stadthotel-loerrach.de,+49 7621 40090,3
+8.05041592357534,47.3916789387644,Sorell Hotel Aarauerhof,2,Bahnhofplatz,Aarau,www.aarauerhof.ch,+41 62 837 83 00,3
+8.3774144677213,47.4179828542335,Hilton Garden Inn Zurich Limmattal,5,Kreuzäckerstrasse,Spreitenbach,hiltongardeninn3.hilton.com/en/hotels/switzerland/hilton-garden-inn-zurich-limmattal-ZRHSPGI/index.html?WT.mc_id=zVSEC0CH1GI2NaturalSearch3GoogleMyBusiness4Luau-zurich_Aug56ZRHSPGI7EN8i1,+41 56 404 40 40,4
+8.28884385772793,47.5881194999843,Hotel Zurzacherhof,5,Dr. Martin Erb-Strasse,Bad Zurzach,www.badzurzach.info/d/gastbetriebe/hotel/Hotel-Zurzacherhof,+41 56 265 22 22,3
+8.28791881869228,47.5889892956379,Hotel zur Therme,30-31,Quellenstrasse,Bad Zurzach,www.thermalquelle.ch/hotels/hotel-zur-therme,+41 56 265 22 22,3
+8.28836694782517,47.5895091500531,Tenedo Hotel,32,Quellenstrasse,Bad Zurzach,www.thermalquelle.ch,+41 56 265 22 22,3
+8.28951495380782,47.5914398664411,Park-Hotel Bad Zurzach,44,Badstrasse,Bad Zurzach,www.park-hotel-zurzach.ch,+41 56 269 88 11,4
+8.94335098283651,45.9923452501126,Hotel De La Paix,18,Viale Giuseppe Cattori,Lugano,www.delapaix.ch,+41 91 960 60 60,4
+8.96721785,46.0068816,Hotel Atlantico,12,Via Concordia,Lugano,www.atlantico-lugano.ch,+41 919712921,2
+8.80510134694113,46.1716421149642,Ramada La Palma au Lac,29,Viale Verbano,Locarno,www.ramada.com/hotels/switzerland/locarno/ramada-la-palma-au-lac-locarno/hotel-overview,+41 91 7353636,4
+9.18189413175746,46.6224175138088,7132 Hotel,560,Poststrasse,vals,www.7132.ch,+41 58 7132 000,5
+9.6492288097953,46.4689658735086,Hotel Solaria,113,Julierstrasse,Bivio,www.hotelsolariabivio.ch,+41 81 6845107,3
+9.64943866069707,46.4694580999157,Hotel Grischuna,26,Vea Valetta,Bivio,www.grischuna-bivio.ch,+41 81 6591212,3
+9.76145606943819,46.4283995419182,Hotel Waldhaus,3,Via da Fex,Sils-Maria,waldhaus-sils.ch,+41 81 8 38 51 00,5
+9.81977652857106,46.4848588586512,Suvretta House,1,Via Chasellas,St. Moritz,www.suvrettahouse.ch,+41 81 836 36 36,5
+9.59084460526305,46.5975434043771,Cube Savognin,12,Veia Sandeilas,Savognin,www.cube-savognin.ch,+41 81 6591414,3
+9.2823866,47.0931453,Hotel Cristal,3,Molseralp,Tannenboden,www.cristal-flumserberg.ch,+41 81 720 16 16,3
+9.54405227136946,46.7784441503023,Hotel Restaurant Hemmi,135,Hauptstrasse,Churwalden,www.hotel-hemmi.ch,+41 81 382 03 03,3
+9.83193218459468,46.8014887910718,Hilton Garden Inn Davos,103,Promenade,Davos,www.davos.hgi.com,+41 81 414 55 55,4
+9.83914831512679,46.8090319769965,Hotel Seehof Davos,159,Promenade,Davos,www.seehofdavos.ch,+41 81 417 94 44,5
+9.5039033020262,47.0004384004597,Grand Resort Bad Ragaz,8,Pfäferserstrasse,Bad Ragaz,www.resortragaz.ch,+41 81 3033030,5
+8.57885872846769,47.3192124704816,Romantik Seehotel Sonne,120,Seestrasse,Küsnacht,sonne.ch,+41 44 914 18 18,4
+8.54394124955262,47.4108271500079,Swissôtel Zürich,44,Schulstrasse,Zürich,www.swissotel.com/hotels/zurich,+41 44 317 31 11,4
+8.56281075500567,47.4388589250307,Ibis Budget Zürich Airport,45,Flughofstrasse,Glattbrugg,www.ibis.com/de/hotel-8480-ibis-budget-zurich-airport/index.shtml,+41 44 828 10 50,1
+8.56889421757478,47.4394721769393,Mövenpick Hotel Zürich Airport,8,Walter Mittelholzerstrasse,Glattbrugg,www.movenpick.com/en/europe/switzerland/zurich/hotel-zurich-airport,+41 44 808 88 88,4
+8.57153770019784,47.4368002255994,Hilton Zurich Airport,10,Hohenbühlstrasse,Opfikon,www3.hilton.com/en/hotels/switzerland/hilton-zurich-airport-ZRHHITW/index.html?WT.mc_id=zELWAKN0EMEA1HI2DMH3LocalSearch4DGGenericx6ZRHHITW,+41 44 828 50 50,4
+8.68763763348543,47.695565799133,Hotel Restaurant Alte Rheinmühle,93,Junkerstraße,Büsingen am Hochrhein,www.alte-rheinmuehle.ch,+41 52 625 25 50,3
+9.05871178250872,47.6218078501338,Wellnesshotel Golfpanorama,6,Golfpanorama,Lipperswil,www.golfpanorama.ch,+41 71 511 06 80,4
+9.53368461321759,47.4457328571565,Hotel Heiden,8,Seeallee,Heiden,www.hotelheiden.ch,+41 71 898 15 15,4
+9.43359028204788,47.5163808996617,Restaurant Römerhof,3,Freiheitsgasse,Arbon,www.roemerhof-arbon.ch,+41 71 447 30 30,4
+9.17489235842683,47.6573429975482,Hotel Hirschen,9,Bodanplatz,Konstanz,www.hirschen-konstanz.de,+49 7531 128260,3
+9.20435358844473,47.6384290998682,Ziil,4,Lengwilerstrasse,Kreuzlingen,www.ziil-hotel.ch,+41 71 686 70 70,3
+9.68687760803524,47.4900743450714,Hotel am See,1,Uferstraße,Hard,www.hotelamsee.biz,+43 5574 63000,4
+9.90083482423954,46.4935234181295,Grand Hotel Kronenhof,130,Via Maistra,Pontresina,www.kronenhof.com,+41 81 830 30 30,5
+9.84960214672429,46.7206342500389,Walserhuus,34,Sertigerstrasse,Davos Sertig,www.walserhuus.ch,+41 81 410 60 30,3
+10.4644914,46.64601965,Natur-Aktiv-Hotel Lamm,37,St. Johann-Straße - Via S. Giovanni,Taufers im Münstertal - Tubre,www.hotel-lamm.com,+39 0473 832168,4
+10.4649919455507,46.6465370498649,Hotel Chavalatsch,31,St. Johann-Straße - Via S. Giovanni,Taufers im Münstertal - Tubre,www.chavalatsch.com,+39 0473 832175,3
 10.0262914980917,46.9853912129989,Bio-Hotel Saladina,200,Schulstraße,Gaschurn,www.slaldina.com,+43 5558 82040,3
