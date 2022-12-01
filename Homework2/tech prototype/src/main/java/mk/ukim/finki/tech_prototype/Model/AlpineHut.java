@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class AlpineHut extends Location {
-    public AlpineHut(Double x, Double y, String name, String city, String street, int houseNumber) {
+    public AlpineHut(Double x, Double y, String name, String city, String street, String houseNumber) {
         super(x, y, name, city, street, houseNumber);
     }
 }

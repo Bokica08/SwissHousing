@@ -22,7 +22,7 @@ public class CampSite extends Location {
     @NotEmpty(message = "The location must have a phone number")
     private String phoneNumber;
 
-    public CampSite(Double x, Double y, String name, String city, String street, int houseNumber, String website, String phoneNumber) {
+    public CampSite(Double x, Double y, String name, String city, String street, String houseNumber, String website, String phoneNumber) {
         super(x, y, name, city, street, houseNumber);
         this.website = website;
         this.phoneNumber = phoneNumber;

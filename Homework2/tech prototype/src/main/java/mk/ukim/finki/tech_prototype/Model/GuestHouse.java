@@ -18,7 +18,7 @@ public class GuestHouse extends Location{
     @NotEmpty(message = "The location must have a phone number")
     private String phoneNumber;
 
-    public GuestHouse(Double x, Double y, String name, String city, String street, int houseNumber, String phoneNumber) {
+    public GuestHouse(Double x, Double y, String name, String city, String street, String houseNumber, String phoneNumber) {
         super(x, y, name, city, street, houseNumber);
         this.phoneNumber = phoneNumber;
     }

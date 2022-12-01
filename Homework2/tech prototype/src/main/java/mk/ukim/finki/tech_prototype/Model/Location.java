@@ -17,11 +17,9 @@ public class Location {
     private Long locationId;
     @Column(nullable = false)
     @NotNull(message = "The location must have coordinates")
-    @NotEmpty(message = "The location must have coordinates")
     private Double x;
     @Column(nullable = false)
     @NotNull(message = "The location must have coordinates")
-    @NotEmpty(message = "The location must have coordinates")
     private Double y;
     @NotNull(message = "The location must have a name")
     @NotEmpty(message = "The location must have a name")
@@ -35,9 +33,10 @@ public class Location {
     @NotEmpty(message = "The location must have a valid address")
     @Column(nullable = false)
     private String street;
+    @NotNull(message = "The location must have a valid address")
     @NotEmpty(message = "The location must have a valid address")
     @Column(nullable = false)
-    private int houseNumber;
+    private String houseNumber;
     @Column(length = 40000)
     private String description;
     private String imagePath;
@@ -46,7 +45,7 @@ public class Location {
     /*@OneToMany(mappedBy = "location")
     @JoinColumn(name = "reviewId")
     private List<Review> reviews;*/
-    public Location(Double x, Double y, String name, String city, String street, int houseNumber) {
+    public Location(Double x, Double y, String name, String city, String street, String houseNumber) {
         this.x = x;
         this.y = y;
         this.name = name;
