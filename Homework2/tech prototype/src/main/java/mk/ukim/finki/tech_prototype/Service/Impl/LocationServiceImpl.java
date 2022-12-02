@@ -2,6 +2,7 @@ package mk.ukim.finki.tech_prototype.Service.Impl;
 
 import mk.ukim.finki.tech_prototype.Model.Exception.InvalidArgumentsException;
 import mk.ukim.finki.tech_prototype.Model.Location;
+import mk.ukim.finki.tech_prototype.Model.Review;
 import mk.ukim.finki.tech_prototype.Repository.LocationRepository;
 import mk.ukim.finki.tech_prototype.Service.LocationService;
 import org.springframework.stereotype.Service;
@@ -31,5 +32,11 @@ public class LocationServiceImpl implements LocationService {
         location.setRating(grades);
         location.setNumOfRatings(num);
         return Optional.of(locationRepository.save(location));
+    }
+
+    @Override
+    public Optional<Location> findById(Long id) {
+
+            return locationRepository.findById(id);
     }
 }
