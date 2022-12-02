@@ -2,9 +2,11 @@ package mk.ukim.finki.tech_prototype.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
+@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 public class AlpineHut extends Location {

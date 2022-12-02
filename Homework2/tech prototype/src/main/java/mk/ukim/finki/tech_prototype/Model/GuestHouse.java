@@ -7,10 +7,12 @@ import jakarta.persistence.InheritanceType;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
 public class GuestHouse extends Location{
     @Column(nullable = false)

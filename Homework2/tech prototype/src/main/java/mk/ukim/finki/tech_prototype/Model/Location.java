@@ -42,9 +42,6 @@ public class Location {
     private String imagePath;
     private Double rating;
     private int numOfRatings;
-    /*@OneToMany(mappedBy = "location")
-    @JoinColumn(name = "reviewId")
-    private List<Review> reviews;*/
     public Location(Double x, Double y, String name, String city, String street, String houseNumber) {
         this.x = x;
         this.y = y;
