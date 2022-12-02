@@ -27,8 +27,8 @@ public class LocationController {
         if(this.locationService.findById(id).isEmpty()) return ResponseEntity.ok().build();
         return ResponseEntity.badRequest().build();
     }
-    @PostMapping("/grade/{id}/{g}")
-    public Optional<Location> addGrade(@PathVariable Long id,@PathVariable int g)
+    @PostMapping("/grade")
+    public Optional<Location> addGrade(@RequestParam Long id,@RequestParam int g)
     {
         return locationService.addGrade(id,g);
     }
