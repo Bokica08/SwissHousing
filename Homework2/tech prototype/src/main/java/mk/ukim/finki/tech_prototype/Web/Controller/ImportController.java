@@ -30,7 +30,7 @@ public class ImportController {
 
     @GetMapping("/hotels")
     public String fillHotels() throws IOException {
-        BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/static/csvData/f_hotel.csv"));
+        BufferedReader reader = new BufferedReader(new FileReader("C:/Users/Bojan/Dropbox/My PC (DESKTOP-HM9G9A7)/Desktop/demo1/SwissHousing/Homework2/tech prototype/src/main/resources/static/csvData/f_hotel.csv"));
         reader.readLine();
         String line=null;
         while ((line=reader.readLine())!=null)
