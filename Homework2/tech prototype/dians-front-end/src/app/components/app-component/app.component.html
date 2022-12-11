@@ -1,0 +1,76 @@
+
+   <nav class="navbar navbar-expand-sm navbar-dark bg-dark" style="padding-left:50px; height: 12vh;">
+      <a class="navbar-brand" href="#">
+        Swiss Housing
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse sidenav" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" routerLink="home">
+              Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="list" class="nav-link">
+               View All
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="map" class="nav-link">
+               View Map
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">
+              Disabled
+            </a>
+          </li>
+        </ul>
+      
+      </div>
+    </nav>
+
+<div style="width:100%; height: 100%;">
+   <router-outlet></router-outlet>
+</div>
+
+<footer class="bg-dark text-center text-white">
+   <div class="container p-4 pb-0">
+     <section class="mb-4">
+      <!--
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+         ><i class="fab fa-facebook-f"></i
+       ></a>
+ 
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+         ><i class="fab fa-twitter"></i
+       ></a>
+ 
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+         ><i class="fab fa-google"></i
+       ></a>
+ 
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+         ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+ 
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+         ><i class="fab fa-linkedin-in"></i
+       ></a>
+       <i class="fa fa-instagram" aria-hidden="true"></i>
+ 
+       <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+         ><i class="fa fa-github"></i
+       ></a>
+         -->
+     </section>
+   </div>
+   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+     © 2022 Copyright:
+     <a class="text-white" href="https://www.facebook.com/bojan.trpeski.37">swisshousing.com</a>
+   </div>
+ </footer>

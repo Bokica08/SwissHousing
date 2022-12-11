@@ -1,0 +1,17 @@
+p {
+    font-family: Lato;
+  }
+
+  .container{
+    margin-right: 0;
+    margin-left: 0;
+  }
+  li{
+    margin-left: 20px;
+  }
+
+  a{
+    font-size: large;
+  }
+
+
