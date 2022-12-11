@@ -1,0 +1,57 @@
+<!--
+<p>list works!</p>
+<div>
+    <button (click)="addEmployee()">
+        Add
+    </button>
+    -->
+
+<div style="width: 100vw; height:100px;" class="form-group">
+    <label style="margin-left: 200px;margin-top:30px; margin-right:20px; float: left;" for="hotels">Search Hotels by:</label>
+
+    <select class="form-select" name="hotels" id="hotels" [(ngModel)]="dropDownResult"
+    style="width: 300px; float:left; margin-top: 20px;"
+    >
+    
+        <option value="city">City</option>
+        <option value="name">Name</option>
+        <option value="stars">Stars</option>
+    </select>
+    <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"
+    style="margin-top:20px; margin-left:50px; float:left; width: 400px;" type="text" [(ngModel)]="filterBy" placeholder="Search by {{dropDownResult}}" (keyup)="filter()">
+</div>
+<div>
+    <div class="container" id="main-container">
+        <div class="row" style="margin-top:20px;">
+            <div *ngFor="let employee of employees" class="col-md-6 col-xl-3">
+                <div class="card m-b-30" style="width: 100%; height:300px; margin-bottom:20px;">
+                    <div class="card-body row">
+                        <div class="col-6">
+                            <a href=""><img src="{{employee.imagePath}}" alt=""
+                                    class="img-fluid rounded-circle w-60"></a>
+                        </div>
+                        <div class="col-6 card-title align-self-center mb-0">
+                            <h5>{{employee.name}}</h5>
+                            <p class="m-0">{{employee.name}}</p>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item"><i class="fa fa-envelope float-right"></i>{{employee.name}}</li>
+                        <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone :
+                            {{employee.imagePath}}</li>
+                    </ul>
+                    <div class="card-body">
+                        <div class="float-right btn-group btn-group-sm">
+                            <a class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i
+                                    class="fa fa-pencil"></i> Edit</a>
+                           <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
+                                    class="fa fa-times"  (click)="test()"></i>Delete</a>-->
+                                    <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteHotel(employee.locationId)">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
