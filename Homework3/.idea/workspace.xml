@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b46bfac6-3360-4d69-b921-43fcce508d76" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/AlpineHut.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/CampSite.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/DTO/AlpineHutDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/DTO/CampSiteDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/DTO/GuestHouseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/DTO/HotelDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/DTO/ReviewDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/Exception/InvalidArgumentsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/GuestHouse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/Hotel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Model/Review.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Repository/AlpineHutRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Repository/CampSiteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Repository/GuestHouseRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Repository/HotelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Repository/LocationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Repository/ReviewRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/AlpineHutService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/CampSiteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/GuestHouseService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/HotelService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/Impl/AlpineHutServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/Impl/CampSiteServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/Impl/GuestHouseServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/Impl/HotelServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/Impl/LocationServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/Impl/ReviewServiceImp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/LocationService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Service/ReviewService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/TechPrototypeApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Web/Controller/AlpineHutController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Web/Controller/CampSiteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Web/Controller/GuestHouseController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Web/Controller/HotelController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Web/Controller/ImportController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Web/Controller/LocationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mk/ukim/finki/tech_prototype/Web/Controller/ReviewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/csvData/f_alpine_hut.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/csvData/f_camp_site.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/csvData/f_guest_house.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/csvData/f_hotel.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/success.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mk/ukim/finki/tech_prototype/TechPrototypeApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2IRwvhPHiklgr3xhsfoNzq0itQo" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/DARKO/Desktop/FINKI/V semestar/Dizajn i arhitektura na softver/DizajnIArhitekturaProekt/Homework2/tech prototype/backend/pom.xml",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b46bfac6-3360-4d69-b921-43fcce508d76" name="Changes" comment="" />
+      <created>1670157938512</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1670157938512</updated>
+      <workItem from="1670157940030" duration="48000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
