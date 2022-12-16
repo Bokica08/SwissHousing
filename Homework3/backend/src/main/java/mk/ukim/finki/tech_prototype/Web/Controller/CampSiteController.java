@@ -11,6 +11,8 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/campsite")
+@CrossOrigin(origins = "http://localhost:4200")
+
 public class CampSiteController {
     private final CampSiteService campSiteService;
 

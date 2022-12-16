@@ -8,13 +8,15 @@ import { MapComponentComponent } from './components/map-component/map-component.
 import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './components/home/home.component';
+import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MapComponentComponent,
     ListComponent,
-    HomeComponent
+    HomeComponent,
+    AlpinehutComponent
   ],
   imports: [
     BrowserModule,

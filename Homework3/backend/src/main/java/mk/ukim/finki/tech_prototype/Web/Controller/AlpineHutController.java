@@ -11,6 +11,8 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/alpinehut")
+@CrossOrigin(origins = "http://localhost:4200")
+
 public class AlpineHutController {
     private final AlpineHutService alpineHutService;
 

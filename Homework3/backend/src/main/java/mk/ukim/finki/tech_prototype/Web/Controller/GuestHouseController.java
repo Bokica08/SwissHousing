@@ -11,6 +11,8 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/guesthouse")
+@CrossOrigin(origins = "http://localhost:4200")
+
 public class GuestHouseController {
     private final GuestHouseService guestHouseService;
 
