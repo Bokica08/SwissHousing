@@ -1,0 +1,58 @@
+<!--
+<p>list works!</p>
+<div>
+    <button (click)="addEmployee()">
+        Add
+    </button>
+    -->
+
+    <div style="width: 100vw; height:100px;" class="form-group">
+        <label style="margin-left: 200px;margin-top:30px; margin-right:20px; float: left;" for="huts">Search Huts by:</label>
+    
+        <select class="form-select" name="huts" id="huts" [(ngModel)]="dropDownResult"
+        style="width: 300px; float:left; margin-top: 20px;"
+        >
+        
+            <option selected value="city">City</option>
+            <option value="name">Name</option>
+        </select>
+        <input class="form-control" type="text" placeholder="Default input" aria-label="default input example"
+        style="margin-top:20px; margin-left:50px; float:left; width: 400px;" type="text" [(ngModel)]="filterBy" placeholder="Search by {{dropDownResult}}" (keyup)="filter()">
+    </div>
+    <div>
+        <div class="container" id="main-container">
+            <div class="row" style="margin-top:20px;">
+                <div *ngFor="let alpinehut of alpinehuts" class="col-md-6 col-xl-3">
+                    <div class="card m-b-30" style="width: 100%; height:300px; margin-bottom:20px;">
+                        <div class="card-body row">
+                            <div class="col-6">
+                                <a href=""><img src="{{alpinehut.imagePath}}" alt=""
+                                        class="img-fluid rounded-circle w-60"></a>
+                            </div>
+                            <div class="col-6 card-title align-self-center mb-0">
+                                <h5>{{alpinehut.name}}</h5>
+                                <p class="m-0">City: {{alpinehut.city}}</p>
+                            </div>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="fa fa-phone float-right"></i>Elevation :
+                                {{alpinehut.elevation}}</li>
+                            <li class="list-group-item"><i class="fa fa-phone float-right"></i>Address :
+                                {{alpinehut.street}} No.{{alpinehut.houseNumber}}</li>
+    
+                        </ul>
+                        <div class="card-body">
+                            <div class="float-right btn-group btn-group-sm">
+                                <a class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i
+                                        class="fa fa-pencil"></i> Edit</a>
+                               <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
+                                        class="fa fa-times"  (click)="test()"></i>Delete</a>-->
+                                        <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteHut(alpinehut.locationId)">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>

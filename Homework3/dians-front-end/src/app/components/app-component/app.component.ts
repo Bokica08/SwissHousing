@@ -4,6 +4,7 @@ import { Employee } from '../../employee';
 import { ConfigService } from '../../config/config.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { AlpineHut } from 'src/app/alpinehut';
 
 @Component({
   selector: 'app-root',
@@ -17,10 +18,14 @@ export class AppComponent implements OnInit {
   public employees!: Employee[];
   public editEmployee!: Employee;
   public deleteEmployee!: Employee;
+  public alpinehuts!: AlpineHut[];
+  public editHut!: AlpineHut;
+  public deleteHut!: AlpineHut;
   public isCollapsed = true;
 
 
   constructor(private employeeService: ConfigService){}
+
 
   ngOnInit() {
     

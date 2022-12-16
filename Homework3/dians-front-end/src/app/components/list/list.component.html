@@ -24,7 +24,7 @@
     <div class="container" id="main-container">
         <div class="row" style="margin-top:20px;">
             <div *ngFor="let employee of employees" class="col-md-6 col-xl-3">
-                <div class="card m-b-30" style="width: 100%; height:300px; margin-bottom:20px;">
+                <div class="card m-b-30" style="width: 100%; height:400px; margin-bottom:20px;">
                     <div class="card-body row">
                         <div class="col-6">
                             <a href=""><img src="{{employee.imagePath}}" alt=""
@@ -40,18 +40,20 @@
                             {{employee.stars}}/5</li>
                         <li class="list-group-item"><i class="fa fa-phone float-right"></i>Address :
                             {{employee.street}} No.{{employee.houseNumber}}</li>
-                            <li class="list-group-item"><i class="fa fa-envelope float-right">Website: </i>{{employee.website}}</li>
-
+                            <li class="list-group-item"><i class="fa fa-envelope float-right">Phone: </i>{{employee.phoneNumber}}</li>
+                        <li class="list-group-item">
+                            <div class="card-body">
+                                <div class="float-right btn-group btn-group-sm">
+                                    <a class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i
+                                            class="fa fa-pencil"></i> Edit</a>
+                                   <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
+                                            class="fa fa-times"  (click)="test()"></i>Delete</a>-->
+                                            <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteHotel(employee.locationId)">Delete</button>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="card-body">
-                        <div class="float-right btn-group btn-group-sm">
-                            <a class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i
-                                    class="fa fa-pencil"></i> Edit</a>
-                           <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
-                                    class="fa fa-times"  (click)="test()"></i>Delete</a>-->
-                                    <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteHotel(employee.locationId)">Delete</button>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
