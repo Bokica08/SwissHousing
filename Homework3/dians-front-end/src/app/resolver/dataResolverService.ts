@@ -4,6 +4,7 @@ import { Observable } from "rxjs";
 import { ConfigService } from "../config/config.service";
 import { Employee } from "../employee";
 import { AlpineHut } from "../alpinehut";
+import { GuestHouse } from "../guest-house.model";
 
 
 @Injectable({providedIn:'root'})
@@ -31,6 +32,20 @@ export class dataResolverServiceHut implements Resolve<AlpineHut[]>{
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): AlpineHut[] | Observable<AlpineHut[]> | Promise<AlpineHut[]> {
         {
             return this.configService.getHuts();
+        }
+    }
+    
+}
+export class dataResolverServiceHouse implements Resolve<GuestHouse[]>{
+
+    constructor(private configService:ConfigService){
+
+    }
+
+
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): GuestHouse[] | Observable<GuestHouse[]> | Promise<GuestHouse[]> {
+        {
+            return this.configService.getHouses();
         }
     }
     

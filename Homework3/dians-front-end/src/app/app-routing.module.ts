@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
+import { GuesthouseComponent } from './components/guesthouse/guesthouse.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
 import { MapComponentComponent } from './components/map-component/map-component.component';
@@ -18,6 +19,9 @@ const routes: Routes = [
   },
   {
     path:'huts',component:AlpinehutComponent
+  },
+  {
+    path:'guesthouses',component:GuesthouseComponent
   }
 ];
 

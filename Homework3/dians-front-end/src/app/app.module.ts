@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './components/home/home.component';
 import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
+import { GuesthouseComponent } from './components/guesthouse/guesthouse.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
     MapComponentComponent,
     ListComponent,
     HomeComponent,
-    AlpinehutComponent
+    AlpinehutComponent,
+    GuesthouseComponent
   ],
   imports: [
     BrowserModule,
