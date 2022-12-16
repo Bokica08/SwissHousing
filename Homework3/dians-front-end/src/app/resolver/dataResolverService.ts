@@ -5,6 +5,7 @@ import { ConfigService } from "../config/config.service";
 import { Employee } from "../employee";
 import { AlpineHut } from "../alpinehut";
 import { GuestHouse } from "../guest-house.model";
+import { CampSite } from "../camp-site.model";
 
 
 @Injectable({providedIn:'root'})
@@ -46,6 +47,20 @@ export class dataResolverServiceHouse implements Resolve<GuestHouse[]>{
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): GuestHouse[] | Observable<GuestHouse[]> | Promise<GuestHouse[]> {
         {
             return this.configService.getHouses();
+        }
+    }
+    
+}
+export class dataResolverServiceCamp implements Resolve<CampSite[]>{
+
+    constructor(private configService:ConfigService){
+
+    }
+
+
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): CampSite[] | Observable<CampSite[]> | Promise<CampSite[]> {
+        {
+            return this.configService.getCamps();
         }
     }
     

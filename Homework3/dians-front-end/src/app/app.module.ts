@@ -10,6 +10,7 @@ import { ListComponent } from './components/list/list.component';
 import { HomeComponent } from './components/home/home.component';
 import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
 import { GuesthouseComponent } from './components/guesthouse/guesthouse.component';
+import { CampsiteComponent } from './components/campsite/campsite.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GuesthouseComponent } from './components/guesthouse/guesthouse.componen
     ListComponent,
     HomeComponent,
     AlpinehutComponent,
-    GuesthouseComponent
+    GuesthouseComponent,
+    CampsiteComponent
   ],
   imports: [
     BrowserModule,

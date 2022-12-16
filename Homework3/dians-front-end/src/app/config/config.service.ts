@@ -5,6 +5,7 @@ import { Employee } from '../employee';
 import { environment } from '../enviroment/enviroment';
 import { AlpineHut } from '../alpinehut';
 import { GuestHouse } from '../guest-house.model';
+import { CampSite } from '../camp-site.model';
 
 @Injectable({providedIn: 'root'})
 export class ConfigService {
@@ -27,6 +28,11 @@ export class ConfigService {
     return this.http.get<GuestHouse[]>(`${this.apiServerUrl}/guesthouse`);
     
   }
+  public getCamps(): Observable<CampSite[]> {
+    
+    return this.http.get<CampSite[]>(`${this.apiServerUrl}/campsite`);
+    
+  }
   public addEmployee(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>(`${this.apiServerUrl}/hotel/add`, employee);
   }
@@ -35,6 +41,9 @@ export class ConfigService {
   }
   public addHouse(house: GuestHouse): Observable<GuestHouse> {
     return this.http.post<GuestHouse>(`${this.apiServerUrl}/guesthouse/add`, house);
+  }
+  public addCamp(camp: CampSite): Observable<CampSite> {
+    return this.http.post<CampSite>(`${this.apiServerUrl}/campsite/add`, camp);
   }
 
   public updateEmployee(employeeId: number): Observable<Employee> {
@@ -46,7 +55,9 @@ export class ConfigService {
   public updateHouse(houseid: number): Observable<GuestHouse> {
     return this.http.delete<GuestHouse>(`${this.apiServerUrl}/guesthouse/edit/${houseid}`);
   }
-  
+  public updateCamp(campid: number): Observable<CampSite> {
+    return this.http.delete<CampSite>(`${this.apiServerUrl}/campsite/edit/${campid}`);
+  }
 
   public deleteEmployee(employeeId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/hotel/delete/${employeeId}`);
@@ -56,6 +67,9 @@ export class ConfigService {
   }
   public deleteHouse(houseid: number): Observable<void> {
     return this.http.delete<void>(`${this.apiServerUrl}/guesthouse/delete/${houseid}`);
+  }
+  public deleteCamp(campid: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiServerUrl}/campsite/delete/${campid}`);
   }
   public getByCity(city:string):Observable<Employee[]>{
     let queryParams= new HttpParams();
@@ -72,6 +86,11 @@ export class ConfigService {
     queryParams=queryParams.append("city",city)
     return this.http.get<GuestHouse[]>(`${this.apiServerUrl}/guesthouse/city`,{params:queryParams})
   }
+  public getByCityCamp(city:string):Observable<CampSite[]>{
+    let queryParams= new HttpParams();
+    queryParams=queryParams.append("city",city)
+    return this.http.get<CampSite[]>(`${this.apiServerUrl}/campsite/city`,{params:queryParams})
+  }
 
   public getByName(name:string):Observable<Employee[]>{
     let queryParams=new HttpParams();
@@ -87,6 +106,11 @@ export class ConfigService {
     let queryParams=new HttpParams();
     queryParams=queryParams.append("name",name)
     return this.http.get<GuestHouse[]>(`${this.apiServerUrl}/guesthouse/cname`,{params:queryParams})
+  }
+  public getByNameCamp(name:string):Observable<CampSite[]>{
+    let queryParams=new HttpParams();
+    queryParams=queryParams.append("name",name)
+    return this.http.get<CampSite[]>(`${this.apiServerUrl}/campsite/cname`,{params:queryParams})
   }
 
   public getByStars(stars:number):Observable<Employee[]>{
