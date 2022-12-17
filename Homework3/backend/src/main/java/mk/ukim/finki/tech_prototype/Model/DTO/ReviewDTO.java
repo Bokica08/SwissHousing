@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import mk.ukim.finki.tech_prototype.Model.Location;
+import mk.ukim.finki.tech_prototype.Model.User;
 
 import java.time.LocalDateTime;
 
@@ -12,7 +13,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class ReviewDTO {
     private String text;
-    private String reviewerName;
-    private String reviewerSurname;
+    private User reviewer;
     private Location location;
 }

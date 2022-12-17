@@ -21,17 +21,14 @@ public class Review {
     private String text;
     @Column(nullable = false)
     private LocalDateTime timeCrated;
+    @ManyToOne
     @Column(nullable = false)
-    private String reviewerName;
-    @Column(nullable = false)
-
-    private String reviewerSurname;
+    private User reviewer;
     @ManyToOne
     private Location location;
-    public Review(String text, String reviewerName, String reviewerSurname, Location location) {
+    public Review(String text, User reviewer, Location location) {
         this.text = text;
-        this.reviewerName = reviewerName;
-        this.reviewerSurname = reviewerSurname;
+        this.reviewer=reviewer;
         this.timeCrated=LocalDateTime.now();
         this.location=location;
     }

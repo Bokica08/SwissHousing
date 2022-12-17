@@ -22,9 +22,9 @@ public class ReviewController {
         return reviewService.findByLocation(locationId);
     }
     @GetMapping("/reviewer")
-    public List<Review> findByReviewer(@RequestParam String name,@RequestParam String surname)
+    public List<Review> findByReviewer(@RequestParam String username)
     {
-        return reviewService.findByReviewer(name,surname);
+        return reviewService.findByReviewer(username);
     }
     @GetMapping("/{id}")
     public Optional<Review> findById(@PathVariable Long id)
@@ -46,7 +46,7 @@ public class ReviewController {
                 .orElseGet(()->ResponseEntity.badRequest().build());
 
     }
-    @DeleteMapping("/delte/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity deleteById(@PathVariable Long id)
     {
         this.reviewService.deleteById(id);

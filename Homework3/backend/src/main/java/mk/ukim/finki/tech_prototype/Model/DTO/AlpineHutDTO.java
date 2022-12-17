@@ -16,4 +16,5 @@ public class AlpineHutDTO {
     private String houseNumber;
     private String description;
     private String imagePath;
+    private int elevation;
 }

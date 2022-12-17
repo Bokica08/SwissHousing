@@ -40,8 +40,6 @@ public class Location {
     @Column(length = 40000)
     private String description;
     private String imagePath;
-    private Double rating;
-    private int numOfRatings;
     public Location(Double x, Double y, String name, String city, String street, String houseNumber) {
         this.x = x;
         this.y = y;
@@ -49,7 +47,5 @@ public class Location {
         this.city = city;
         this.street = street;
         this.houseNumber = houseNumber;
-        this.rating= (double) 0;
-        this.numOfRatings=0;
     }
 }
