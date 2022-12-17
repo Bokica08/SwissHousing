@@ -23,6 +23,7 @@ export class dataResolverService implements Resolve<Employee[]>{
     }
     
 }
+@Injectable({providedIn:'root'})
 export class dataResolverServiceHut implements Resolve<AlpineHut[]>{
 
     constructor(private configService:ConfigService){
@@ -37,6 +38,7 @@ export class dataResolverServiceHut implements Resolve<AlpineHut[]>{
     }
     
 }
+@Injectable({providedIn:'root'})
 export class dataResolverServiceHouse implements Resolve<GuestHouse[]>{
 
     constructor(private configService:ConfigService){
@@ -51,6 +53,7 @@ export class dataResolverServiceHouse implements Resolve<GuestHouse[]>{
     }
     
 }
+@Injectable({providedIn:'root'})
 export class dataResolverServiceCamp implements Resolve<CampSite[]>{
 
     constructor(private configService:ConfigService){

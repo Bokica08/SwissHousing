@@ -7,6 +7,7 @@ import { ConfigService } from 'src/app/config/config.service';
 import { Employee } from 'src/app/employee';
 import { ActivatedRoute } from '@angular/router';
 import { AlpineHut } from 'src/app/alpinehut';
+import { CampSite } from 'src/app/camp-site.model';
 
 
 @Component({
@@ -19,6 +20,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
   title="google-maps";
   public hotels:Employee[] | undefined;
   public huts:AlpineHut[] | undefined;
+  public camps:CampSite[] | undefined;
   public map:google.maps.Map | undefined;
   public markers:google.maps.Marker[];
   public locations:any[];
@@ -31,7 +33,9 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
     private activateRoute: ActivatedRoute,
     ){
     this.hotels=this.activateRoute.snapshot.data['data'];
-    this.huts=this.getHuts();
+    this.huts=this.activateRoute.snapshot.data['data2']
+    this.camps=this.activateRoute.snapshot.data['data3']
+
   }
   
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
@@ -66,6 +70,20 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
       
     );
   }
+  public getCamps(): any {
+  
+    this.configService.getCamps().subscribe(
+      
+      (response: CampSite[]) => {
+        this.camps= response;
+        console.log(this.camps);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message); 
+      }
+      
+    );
+  }
 
   
    ngOnInit():void {
@@ -80,7 +98,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
   }
 
   showMap(){
-    
+
     let loader = new Loader({
       apiKey:'AIzaSyCBQHpSfY2NfXhJy7rHqn-bmQN_GGSFOGI',
     });
@@ -188,7 +206,26 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
           })
 
           
-      }     
+      }
+      for(let camp of Object.values(this.camps)){
+        const location3={
+          lat:camp.y,
+          lng:camp.x
+        }
+        console.log(camp)
+
+          const marker3 = new google.maps.Marker({
+            position:location3,
+            map:this.map,
+            title:camp.city,
+            icon:red,
+            shape:shape,
+            optimized:false,
+            clickable:true,
+          })
+
+          
+      }        
     })
 
 
