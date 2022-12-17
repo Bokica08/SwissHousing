@@ -49,7 +49,7 @@ public class ImportController {
         while ((line=reader.readLine())!=null)
         {
             String[] parts=line.split(",");
-            alpineHutService.post(Double.parseDouble(parts[0]), Double.parseDouble(parts[1]), parts[2], parts[4], parts[5], parts[6]);
+            alpineHutService.post(Double.parseDouble(parts[0]), Double.parseDouble(parts[1]), parts[2], parts[4], parts[5], parts[6], Integer.parseInt(parts[3]));
         }
         return "success";
     }

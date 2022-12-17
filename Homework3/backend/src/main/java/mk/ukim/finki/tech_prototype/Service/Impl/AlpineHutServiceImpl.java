@@ -18,13 +18,13 @@ public class AlpineHutServiceImpl implements AlpineHutService {
     }
 
     @Override
-    public Optional<AlpineHut> post(Double x, Double y, String name, String city, String street, String houseNumber) {
-        return Optional.of(alpineHutRepository.save(new AlpineHut(x, y, name, city, street, houseNumber)));
+    public Optional<AlpineHut> post(Double x, Double y, String name, String city, String street, String houseNumber, int elevation) {
+        return Optional.of(alpineHutRepository.save(new AlpineHut(x, y, name, city, street, houseNumber, elevation)));
     }
 
     @Override
     public Optional<AlpineHut> post(AlpineHutDTO alpineHutDTO) {
-        AlpineHut hut = new AlpineHut(alpineHutDTO.getX(), alpineHutDTO.getY(), alpineHutDTO.getName(), alpineHutDTO.getCity(), alpineHutDTO.getStreet(), alpineHutDTO.getHouseNumber());
+        AlpineHut hut = new AlpineHut(alpineHutDTO.getX(), alpineHutDTO.getY(), alpineHutDTO.getName(), alpineHutDTO.getCity(), alpineHutDTO.getStreet(), alpineHutDTO.getHouseNumber(), alpineHutDTO.getElevation());
         if(alpineHutDTO.getDescription()!=null && !alpineHutDTO.getDescription().isEmpty())
         {
             hut.setDescription(alpineHutDTO.getDescription());
@@ -47,7 +47,7 @@ public class AlpineHutServiceImpl implements AlpineHutService {
     }
 
     @Override
-    public Optional<AlpineHut> edit(Long id, Double x, Double y, String name, String city, String street, String houseNumber, String description, String imagePath) {
+    public Optional<AlpineHut> edit(Long id, Double x, Double y, String name, String city, String street, String houseNumber, String description, String imagePath, int elevation) {
         AlpineHut hut=alpineHutRepository.findById(id).orElseThrow(InvalidArgumentsException::new);
         hut.setX(x);
         hut.setY(y);
@@ -55,6 +55,7 @@ public class AlpineHutServiceImpl implements AlpineHutService {
         hut.setName(name);
         hut.setStreet(street);
         hut.setHouseNumber(houseNumber);
+        hut.setElevation(elevation);
         if(description!=null && !description.isEmpty())
         {
             hut.setDescription(description);
@@ -75,6 +76,7 @@ public class AlpineHutServiceImpl implements AlpineHutService {
         hut.setName(alpineHutDTO.getName());
         hut.setStreet(alpineHutDTO.getStreet());
         hut.setHouseNumber(alpineHutDTO.getHouseNumber());
+        hut.setElevation(alpineHutDTO.getElevation());
         if(alpineHutDTO.getDescription()!=null && !alpineHutDTO.getDescription().isEmpty())
         {
             hut.setDescription(alpineHutDTO.getDescription());
