@@ -8,6 +8,7 @@ import { Employee } from 'src/app/employee';
 import { ActivatedRoute } from '@angular/router';
 import { AlpineHut } from 'src/app/alpinehut';
 import { CampSite } from 'src/app/camp-site.model';
+import { GuestHouse } from 'src/app/guest-house.model';
 
 
 @Component({
@@ -21,6 +22,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
   public hotels:Employee[] | undefined;
   public huts:AlpineHut[] | undefined;
   public camps:CampSite[] | undefined;
+  public houses:GuestHouse[]| undefined;
   public map:google.maps.Map | undefined;
   public markers:google.maps.Marker[];
   public locations:any[];
@@ -35,6 +37,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
     this.hotels=this.activateRoute.snapshot.data['data'];
     this.huts=this.activateRoute.snapshot.data['data2']
     this.camps=this.activateRoute.snapshot.data['data3']
+    this.houses=this.activateRoute.snapshot.data['data4']
 
   }
   
@@ -225,10 +228,30 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
           })
 
           
-      }        
+      }
+      for(let house of Object.values(this.houses)){
+        const location4={
+          lat:house.y,
+          lng:house.x
+        }
+        console.log(house)
+
+          const marker4 = new google.maps.Marker({
+            position:location4,
+            map:this.map,
+            title:house.city,
+            icon:yellow,
+            shape:shape,
+            optimized:false,
+            clickable:true,
+          })
+
+          
+      }         
     })
 
 
   }
+  
   
 }
