@@ -22,7 +22,6 @@ public class Review {
     @Column(nullable = false)
     private LocalDateTime timeCrated;
     @ManyToOne
-    @Column(nullable = false)
     private User reviewer;
     @ManyToOne
     private Location location;
