@@ -7,6 +7,6 @@ import java.util.*;
 
 public interface LocationService {
     void deleteById(Long id);
-    Optional<Location>addGrade(Long id, int g);
+    double getGradeForLocation(Long id);
     Optional<Location> findById(Long id);
 }

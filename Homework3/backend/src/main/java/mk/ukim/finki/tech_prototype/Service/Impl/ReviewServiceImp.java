@@ -26,17 +26,17 @@ public class ReviewServiceImp implements ReviewService {
     }
 
     @Override
-    public Optional<Review> post(String text, String username, Long locationId) {
+    public Optional<Review> post(String text, String username, Long locationId, int grade) {
         Location location = locationRepository.findById(locationId).orElseThrow(InvalidArgumentsException::new);
         User user = userRepository.findByUsername(username).orElseThrow(InvalidArgumentsException::new);
-        return Optional.of(reviewRepository.save(new Review(text, user, location)));
+        return Optional.of(reviewRepository.save(new Review(text, user, location, grade)));
     }
 
     @Override
     public Optional<Review> post(ReviewDTO reviewDto) {
         Location location = locationRepository.findById(reviewDto.getLocation().getLocationId()).orElseThrow(InvalidArgumentsException::new);
         User user = userRepository.findByUsername(reviewDto.getReviewer().getUsername()).orElseThrow(InvalidArgumentsException::new);
-        return Optional.of(reviewRepository.save(new Review(reviewDto.getText(), user, location)));
+        return Optional.of(reviewRepository.save(new Review(reviewDto.getText(), user, location, reviewDto.getGrade())));
     }
 
     @Override
@@ -56,13 +56,14 @@ public class ReviewServiceImp implements ReviewService {
     }
 
     @Override
-    public Optional<Review> edit(Long id, String text, String username, Long locationId) {
+    public Optional<Review> edit(Long id, String text, String username, Long locationId, int grade) {
         Review review = reviewRepository.findById(id).orElseThrow(InvalidArgumentsException::new);
         review.setText(text);
         User user = userRepository.findByUsername(username).orElseThrow(InvalidArgumentsException::new);
         review.setReviewer(user);
         Location location = locationRepository.findById(locationId).orElseThrow(InvalidArgumentsException::new);
         review.setLocation(location);
+        review.setGrade(grade);
         return Optional.of(reviewRepository.save(review));
     }
 
@@ -74,6 +75,7 @@ public class ReviewServiceImp implements ReviewService {
         review.setReviewer(user);
         Location location = locationRepository.findById(reviewDTO.getLocation().getLocationId()).orElseThrow(InvalidArgumentsException::new);
         review.setLocation(location);
+        review.setGrade(review.getGrade());
         return Optional.of(reviewRepository.save(review));
     }
 

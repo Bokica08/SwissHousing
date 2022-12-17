@@ -28,9 +28,9 @@ public class LocationController {
         return ResponseEntity.badRequest().build();
     }
     @PostMapping("/grade/{id}")
-    public Optional<Location> addGrade(@PathVariable Long id,@RequestParam int g)
+    public double getGrade(@PathVariable Long id)
     {
-        return locationService.addGrade(id,g);
+        return locationService.getGradeForLocation(id);
     }
 
 }

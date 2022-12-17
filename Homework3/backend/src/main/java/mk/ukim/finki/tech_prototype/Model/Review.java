@@ -26,7 +26,9 @@ public class Review {
     private User reviewer;
     @ManyToOne
     private Location location;
-    public Review(String text, User reviewer, Location location) {
+    @NotNull(message = "The review must have a grade")
+    private int grade;
+    public Review(String text, User reviewer, Location location, int grade) {
         this.text = text;
         this.reviewer=reviewer;
         this.timeCrated=LocalDateTime.now();
