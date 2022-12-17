@@ -6,6 +6,7 @@ import { Marker } from '@syncfusion/ej2-maps';
 import { ConfigService } from 'src/app/config/config.service';
 import { Employee } from 'src/app/employee';
 import { ActivatedRoute } from '@angular/router';
+import { AlpineHut } from 'src/app/alpinehut';
 
 
 @Component({
@@ -17,6 +18,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
 
   title="google-maps";
   public hotels:Employee[] | undefined;
+  public huts:AlpineHut[] | undefined;
   public map:google.maps.Map | undefined;
   public markers:google.maps.Marker[];
   public locations:any[];
@@ -29,13 +31,12 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
     private activateRoute: ActivatedRoute,
     ){
     this.hotels=this.activateRoute.snapshot.data['data'];
+    this.huts=this.getHuts();
   }
+  
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
     throw new Error('Method not implemented.');
   }
-  
-
-  
 
   public getEmployees(): void {
   
@@ -44,6 +45,20 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
       (response: Employee[]) => {
         this.hotels = response;
         console.log(this.hotels);
+      },
+      (error: HttpErrorResponse) => {
+        alert(error.message);
+      }
+      
+    );
+  }
+  public getHuts(): any {
+  
+    this.configService.getHuts().subscribe(
+      
+      (response: AlpineHut[]) => {
+        this.huts = response;
+        console.log(this.huts);
       },
       (error: HttpErrorResponse) => {
         alert(error.message);
@@ -83,16 +98,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
         zoom:8,
       })
 
-      
 
-      // const marker= new google.maps.Marker({
-      //   position:location,
-      //   map:this.map
-      // })
-
-
-
-      debugger
       const svgMarker = {
         path: "M10.453 14.016l6.563-6.609-1.406-1.406-5.156 5.203-2.063-2.109-1.406 1.406zM12 2.016q2.906 0 4.945 2.039t2.039 4.945q0 1.453-0.727 3.328t-1.758 3.516-2.039 3.070-1.711 2.273l-0.75 0.797q-0.281-0.328-0.75-0.867t-1.688-2.156-2.133-3.141-1.664-3.445-0.75-3.375q0-2.906 2.039-4.945t4.945-2.039z",
         fillColor: "blue",
@@ -103,10 +109,40 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
         anchor: new google.maps.Point(15, 30),
       };
 
-      const image = {
-        url: "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png",
+      const blue = {
+        url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
         // This marker is 20 pixels wide by 32 pixels high.
-        size: new google.maps.Size(20, 32),
+        size: new google.maps.Size(32, 32),
+        // The origin for this image is (0, 0).
+        origin: new google.maps.Point(0, 0),
+        // The anchor for this image is the base of the flagpole at (0, 32).
+        anchor: new google.maps.Point(0, 32),
+      };
+      
+      const green = {
+        url: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+        // This marker is 20 pixels wide by 32 pixels high.
+        size: new google.maps.Size(32, 32),
+        // The origin for this image is (0, 0).
+        origin: new google.maps.Point(0, 0),
+        // The anchor for this image is the base of the flagpole at (0, 32).
+        anchor: new google.maps.Point(0, 32),
+      };
+      
+      const red = {
+        url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+        // This marker is 20 pixels wide by 32 pixels high.
+        size: new google.maps.Size(32, 32),
+        // The origin for this image is (0, 0).
+        origin: new google.maps.Point(0, 0),
+        // The anchor for this image is the base of the flagpole at (0, 32).
+        anchor: new google.maps.Point(0, 32),
+      };
+      
+      const yellow = {
+        url: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+        // This marker is 20 pixels wide by 32 pixels high.
+        size: new google.maps.Size(32, 32),
         // The origin for this image is (0, 0).
         origin: new google.maps.Point(0, 0),
         // The anchor for this image is the base of the flagpole at (0, 32).
@@ -123,22 +159,38 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
           lat:hotel.y,
           lng:hotel.x
         }
-        debugger
           const marker = new google.maps.Marker({
             position:location1,
             map:this.map,
             title:hotel.city,
-            icon:image,
+            icon:blue,
             shape:shape,
             optimized:false,
             clickable:true,
           })
-          debugger
           
       }
-     
+      for(let hut of Object.values(this.huts)){
+        const location2={
+          lat:hut.y,
+          lng:hut.x
+        }
+        console.log(hut)
 
+          const marker2 = new google.maps.Marker({
+            position:location2,
+            map:this.map,
+            title:hut.city,
+            icon:green,
+            shape:shape,
+            optimized:false,
+            clickable:true,
+          })
+
+          
+      }     
     })
+
 
   }
   
