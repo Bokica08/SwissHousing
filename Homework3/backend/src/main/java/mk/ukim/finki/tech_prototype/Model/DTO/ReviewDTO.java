@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class ReviewDTO {
     private String text;
-    private User reviewer;
     private Location location;
     private int grade;
 }
