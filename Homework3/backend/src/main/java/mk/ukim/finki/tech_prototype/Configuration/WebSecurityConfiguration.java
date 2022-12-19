@@ -45,7 +45,7 @@ public class WebSecurityConfiguration{
                 .requestMatchers("/location/{id}").permitAll()
                 .requestMatchers("/location/delete/**").hasRole("ADMIN")
                 .requestMatchers("/location/grade/**").permitAll()
-                .requestMatchers("/user/authorizeAdmin").hasRole("ADMIN")
+                .requestMatchers("/user/pending/**").hasRole("ADMIN")
                 .requestMatchers("/user/addFavourite/**", "user/addVisited/**").hasRole("USER")
                 .anyRequest().permitAll()
                 .and()

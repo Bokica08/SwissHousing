@@ -12,4 +12,5 @@ public interface UserService extends UserDetailsService {
     Optional<User> authorizePendingAdmin(String username);
     Optional<User> addToFavourites(String username, Long locationId);
     Optional<User> addToVisited(String username, Long locationId);
+    List<User> findAllPendingAdmins();
 }

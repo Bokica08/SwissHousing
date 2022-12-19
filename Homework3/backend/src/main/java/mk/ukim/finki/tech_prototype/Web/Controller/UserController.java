@@ -5,6 +5,7 @@ import mk.ukim.finki.tech_prototype.Model.*;
 import mk.ukim.finki.tech_prototype.Service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.*;
 
 @RestController
 @RequestMapping("/user")
@@ -17,12 +18,18 @@ public class UserController {
         this.userService = userService;
     }
 
-    @GetMapping("/authorizeAdmin")
+    @GetMapping("/pending/authorizeAdmin")
     public ResponseEntity<User> authorizeAdmin(@RequestParam String username)
     {
         return this.userService.authorizePendingAdmin(username)
                 .map(user -> ResponseEntity.ok().body(user))
                 .orElseGet(()->ResponseEntity.badRequest().build());
+    }
+
+    @GetMapping("/pending")
+    public List<User> findPendingAdmins()
+    {
+        return userService.findAllPendingAdmins();
     }
     
     @GetMapping("/user/addFavourite/{id}")

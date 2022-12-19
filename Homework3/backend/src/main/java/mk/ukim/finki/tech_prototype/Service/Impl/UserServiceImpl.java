@@ -82,5 +82,10 @@ public class UserServiceImpl implements UserService {
         return Optional.of(userRepository.save(user));
     }
 
+    @Override
+    public List<User> findAllPendingAdmins() {
+        return userRepository.findAllByRole(Role.ROLE_PENDING_ADMIN);
+    }
+
 
 }
