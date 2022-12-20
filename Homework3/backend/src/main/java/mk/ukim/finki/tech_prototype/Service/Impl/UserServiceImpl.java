@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
             throw new PasswordsDoNotMatchException();
         if(this.userRepository.findByUsername(userDTO.getUsername()).isPresent())
             throw new UsernameAlreadyExistsException(userDTO.getUsername());
-        User user = new User(userDTO.getUsername(),passwordEncoder.encode(userDTO.getPassword()), userDTO.getName(), userDTO.getSurname(), userDTO.getRole());
+        User user = new User(userDTO.getUsername(), userDTO.getName(), userDTO.getSurname(), passwordEncoder.encode(userDTO.getPassword()), userDTO.getRole());
         return Optional.of(userRepository.save(user));
     }
 

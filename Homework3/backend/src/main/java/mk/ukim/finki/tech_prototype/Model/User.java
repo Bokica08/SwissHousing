@@ -32,7 +32,7 @@ public class User implements UserDetails {
     @NotNull(message = "The user must have an password")
     @NotEmpty(message = "The user must have an password")
     private String password;
-    @Enumerated(value = EnumType.ORDINAL)
+    @Enumerated(value = EnumType.STRING)
     @NotNull(message = "The user must have a role")
     private Role role;
     @ManyToMany
