@@ -23,11 +23,11 @@
         <div class="container" id="main-container">
             <div class="row" style="margin-top:20px;">
                 <div *ngFor="let alpinehut of alpinehuts" class="col-md-6 col-xl-3">
-                    <div class="card m-b-30" style="width: 100%; height:300px; margin-bottom:20px;">
+                    <div class="card m-b-30" style="width: 100%; height:350px; margin-bottom:20px;">
                         <div class="card-body row">
                             <div class="col-6">
                                 <a href=""><img src="{{alpinehut.imagePath}}" alt=""
-                                        class="img-fluid rounded-circle w-60"></a>
+                                        class="img-fluid rounded h-100 w-60"></a>
                             </div>
                             <div class="col-6 card-title align-self-center mb-0">
                                 <h5>{{alpinehut.name}}</h5>
@@ -41,15 +41,17 @@
                                 {{alpinehut.street}} No.{{alpinehut.houseNumber}}</li>
     
                         </ul>
+                        <li class="list-group-item" style="margin: -1px;">
                         <div class="card-body">
                             <div class="float-right btn-group btn-group-sm">
-                                <a class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i
+                                <a class="btn btn-danger tooltips" data-placement="top" data-original-title="Edit"><i
                                         class="fa fa-pencil"></i> Edit</a>
                                <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
                                         class="fa fa-times"  (click)="test()"></i>Delete</a>-->
                                         <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteHut(alpinehut.locationId)">Delete</button>
                             </div>
                         </div>
+                        </li>
                     </div>
                 </div>
             </div>
