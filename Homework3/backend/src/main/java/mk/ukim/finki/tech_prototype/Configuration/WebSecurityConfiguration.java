@@ -61,8 +61,7 @@ public class WebSecurityConfiguration{
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .logoutSuccessUrl("/login")
-                .and().csrf()
-                .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse());
+                .and();
         return http.build();
     }
 }
