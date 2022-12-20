@@ -7,6 +7,7 @@ import { AlpineHut } from "../alpinehut";
 import { GuestHouse } from "../guest-house.model";
 import { CampSite } from "../camp-site.model";
 import { HttpClient } from "@angular/common/http";
+import { SignupComponent } from "../components/signup/signup.component";
 
 
 @Injectable({providedIn:'root'})

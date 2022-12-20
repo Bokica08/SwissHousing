@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormBuilder, NgForm } from '@angular/forms';
 import { dataService } from 'src/app/resolver/dataService';
 import { Register } from './signup.model';
 
@@ -15,8 +15,8 @@ signup=new Register();
 
   constructor(private dataserivce:dataService,private httpClient:HttpClient){}
   ngOnInit(): void {
-
-  
+ 
+ 
 }
 submit(f:NgForm)
 {

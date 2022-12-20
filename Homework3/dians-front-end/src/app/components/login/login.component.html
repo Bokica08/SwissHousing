@@ -11,12 +11,16 @@
                 <p class="text-white-50 mb-5">Please enter your username and password!</p>
 
                 <div class="form-outline form-white mb-4">
-                  <input type="text" id="typeEmailX" class="form-control form-control-lg" name="username" [(ngModel)]="login.username" />
-                  <label class="form-label" for="username">Username</label>
+                  <input required #username="ngModel" type="text" id="typeEmailX" class="form-control form-control-lg" name="username" [(ngModel)]="login.username" />
+                  <label class="form-label" for="username">Username</label><br>
+                  <span *ngIf="(username.invalid && username.touched) || (f.submitted && username.invalid)" class="error text-danger">Username filed is required</span>
+
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <input type="password" id="typePasswordX" class="form-control form-control-lg" name="password" [(ngModel)]="login.password" />
-                  <label class="form-label" for="password">Password</label>
+                  <input required #password="ngModel" type="password" id="typePasswordX" class="form-control form-control-lg" name="password" [(ngModel)]="login.password" />
+                  <label class="form-label" for="password">Password</label><br>
+                  <span *ngIf="password.invalid && password.touched  || (f.submitted && password.invalid)" class="error text-danger">Password filed is required</span>
+
                 </div>
                 <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
               </div>
