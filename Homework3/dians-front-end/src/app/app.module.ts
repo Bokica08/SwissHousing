@@ -13,6 +13,7 @@ import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
 import { GuesthouseComponent } from './components/guesthouse/guesthouse.component';
 import { CampsiteComponent } from './components/campsite/campsite.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { LoginComponent } from './components/login/login.component';
 const routes:Routes=[
 
 
@@ -26,7 +27,8 @@ const routes:Routes=[
     AlpinehutComponent,
     GuesthouseComponent,
     CampsiteComponent,
-    SignupComponent
+    SignupComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

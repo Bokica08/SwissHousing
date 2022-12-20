@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-4 offset-md-4 col-sm-6 offset-sm-3">
+      <div class="card auth">
+        <div class="card-body auth-card">
+          <div class="auth-avatar">
+            <img src="https://pluspng.com/img-png/user-png-icon-account-avatar-human-male-man-men-people-person-download-svg-download-png-edit-icon-512.png" alt="user" class="user-image">
+          </div>
+          <form (ngSubmit)="submit()">
+              <div class="form-group">
+                <label for="username">Username : </label>
+                <input type="text" name="username" class="form-control" placeholder="username" [(ngModel)]="login.username">
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password : </label>
+                <input type="password" name="password" class="form-control" placeholder="********" [(ngModel)]="login.password">
+              </div>
+              <div class="text-center">
+                <input type="submit" class="btn btn-my" value="Log in">
+              </div>
+
+              <div class="text-center login">
+                Already have an account ? <a routerLink="/login">Login</a> hera.
+              </div>
+              
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

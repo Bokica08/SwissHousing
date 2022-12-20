@@ -5,6 +5,7 @@ import { CampsiteComponent } from './components/campsite/campsite.component';
 import { GuesthouseComponent } from './components/guesthouse/guesthouse.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
+import { LoginComponent } from './components/login/login.component';
 import { MapComponentComponent } from './components/map-component/map-component.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { dataResolverService, dataResolverServiceCamp, dataResolverServiceHouse, dataResolverServiceHut } from './resolver/dataResolverService';
@@ -31,6 +32,9 @@ const routes: Routes = [
   },
   {
     path:'register',component:SignupComponent
+  },
+  {
+    path:'login',component:LoginComponent
   }
 
 ];
