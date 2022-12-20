@@ -10,7 +10,7 @@ import { Register } from './signup.model';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit{
-  roles=[{id:1, value:'ROLE_USER', name:"user"},{id:2, value:'ROLE_PENDING_ADMIN', name:"admin"}]
+  roles=[{id:1, value:'ROLE_USER', name:"User"},{id:2, value:'ROLE_PENDING_ADMIN', name:"Admin"}]
 signup=new Register();
 
   constructor(private dataserivce:dataService,private httpClient:HttpClient){}
