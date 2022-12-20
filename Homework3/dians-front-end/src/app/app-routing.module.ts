@@ -6,6 +6,7 @@ import { GuesthouseComponent } from './components/guesthouse/guesthouse.componen
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
 import { MapComponentComponent } from './components/map-component/map-component.component';
+import { SignupComponent } from './components/signup/signup.component';
 import { dataResolverService, dataResolverServiceCamp, dataResolverServiceHouse, dataResolverServiceHut } from './resolver/dataResolverService';
 
 const routes: Routes = [
@@ -27,7 +28,11 @@ const routes: Routes = [
   },
   {
     path:'campsites',component:CampsiteComponent
+  },
+  {
+    path:'register',component:SignupComponent
   }
+
 ];
 
 @NgModule({

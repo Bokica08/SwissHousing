@@ -6,12 +6,13 @@ import { Employee } from "../employee";
 import { AlpineHut } from "../alpinehut";
 import { GuestHouse } from "../guest-house.model";
 import { CampSite } from "../camp-site.model";
+import { HttpClient } from "@angular/common/http";
 
 
 @Injectable({providedIn:'root'})
 export class dataResolverService implements Resolve<Employee[]>{
 
-    constructor(private configService:ConfigService){
+    constructor(private configService:ConfigService,private httpClient:HttpClient){
 
     }
 
@@ -66,5 +67,6 @@ export class dataResolverServiceCamp implements Resolve<CampSite[]>{
             return this.configService.getCamps();
         }
     }
-    
+
+  
 }

@@ -129,6 +129,25 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
         scale: 2,
         anchor: new google.maps.Point(15, 30),
       };
+      const icons: Record<string, any> = {
+        hotel: {
+          name: "hotels",
+          icon:"http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
+        },
+        hut: {
+          name: "huts",
+          icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+        },
+        camp: {
+          name: "camps",
+          icon: "http://maps.google.com/mapfiles/ms/icons/green-dot.png",
+        },
+        house: {
+          name: "houses",
+          icon: "http://maps.google.com/mapfiles/ms/icons/yellow-dot.png",
+        },
+        
+      };
 
       const blue = {
         url: "http://maps.google.com/mapfiles/ms/icons/blue-dot.png",
@@ -188,6 +207,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
             shape:shape,
             optimized:false,
             clickable:true,
+            
           })
           
       }
@@ -247,11 +267,11 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
           })
 
           
-      }         
+      }      
+      
     })
 
 
   }
-  
-  
 }
+

@@ -3,7 +3,8 @@ import { NgModule } from '@angular/core';
 import { Routes, } from '@angular/router';
 import { AppComponent } from './components/app-component/app.component';
 import { ConfigService } from './config/config.service';
-import { HttpClientModule } from '@angular/common/http';import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { MapComponentComponent } from './components/map-component/map-component.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListComponent } from './components/list/list.component';
@@ -11,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
 import { GuesthouseComponent } from './components/guesthouse/guesthouse.component';
 import { CampsiteComponent } from './components/campsite/campsite.component';
+import { SignupComponent } from './components/signup/signup.component';
 const routes:Routes=[
 
 
@@ -23,13 +25,15 @@ const routes:Routes=[
     HomeComponent,
     AlpinehutComponent,
     GuesthouseComponent,
-    CampsiteComponent
+    CampsiteComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [ConfigService],
   bootstrap: [AppComponent]
