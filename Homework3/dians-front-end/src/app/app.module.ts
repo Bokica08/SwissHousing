@@ -14,11 +14,8 @@ import { GuesthouseComponent } from './components/guesthouse/guesthouse.componen
 import { CampsiteComponent } from './components/campsite/campsite.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
-<<<<<<< HEAD
 import { AlpinehutEditComponent } from './components/alpinehut-edit/alpinehut-edit.component';
-=======
 import { AddingGuestshousesComponent } from './components/adding-guestshouses/adding-guestshouses.component';
->>>>>>> editing-locations
 const routes:Routes=[
 
 
@@ -34,11 +31,8 @@ const routes:Routes=[
     CampsiteComponent,
     SignupComponent,
     LoginComponent,
-<<<<<<< HEAD
-    AlpinehutEditComponent
-=======
+    AlpinehutEditComponent,
     AddingGuestshousesComponent
->>>>>>> editing-locations
   ],
   imports: [
     BrowserModule,
