@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddingGuestshousesComponent } from './components/adding-guestshouses/adding-guestshouses.component';
 import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
 import { CampsiteComponent } from './components/campsite/campsite.component';
 import { GuesthouseComponent } from './components/guesthouse/guesthouse.component';
@@ -35,6 +36,9 @@ const routes: Routes = [
   },
   {
     path:'login',component:LoginComponent
+  },
+  {
+    path:'add-guesth',component:AddingGuestshousesComponent
   }
 
 ];
