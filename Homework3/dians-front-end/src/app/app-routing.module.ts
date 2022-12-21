@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddingGuestshousesComponent } from './components/adding-guestshouses/adding-guestshouses.component';
+import { AddingHotelsComponent } from './components/adding-hotels/adding-hotels.component';
+import { AddingCampsComponent } from './components/adding-camps/adding-camps.component';
+import { AddingHutsComponent } from './components/adding-huts/adding-huts.component';
 import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
 import { CampsiteComponent } from './components/campsite/campsite.component';
 import { EditingGuesthousesComponent } from './components/editing-guesthouses/editing-guesthouses.component';
@@ -40,6 +43,15 @@ const routes: Routes = [
   },
   {
     path:'add-guesth',component:AddingGuestshousesComponent
+  },
+  {
+    path:'add-hotel',component:AddingHotelsComponent
+  },
+  {
+    path:'add-camp',component:AddingCampsComponent
+  },
+  {
+    path:'add-hut',component:AddingHutsComponent
   },
   {
     path:'edit-guesth/:id',component:EditingGuesthousesComponent

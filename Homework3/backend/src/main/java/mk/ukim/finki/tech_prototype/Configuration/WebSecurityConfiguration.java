@@ -33,7 +33,7 @@ public class WebSecurityConfiguration{
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         /*http.csrf().disable().authorizeHttpRequests()
-                .requestMatchers("/", "/csv/**", "/assests/**", "/register").permitAll()
+                .requestMatchers("/", "/csv/**", "/assets/**", "/register").permitAll()
                 .requestMatchers("/review/**").hasRole("USER")
                 .requestMatchers("/alpinehut", "/alpinehut/{id}", "/alpinehut/name", "/alpinehut/cname", "/alpinehut/city").permitAll()
                 .requestMatchers("/alpinehut/edit/**", "/alpinehut/add/**").hasRole("ADMIN")
