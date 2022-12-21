@@ -118,4 +118,8 @@ export class ConfigService {
     queryParams=queryParams.append("stars",stars)
     return this.http.get<Employee[]>(`${this.apiServerUrl}/hotel/stars`,{params:queryParams});
   }
+  public getGHouse(id:number):Observable<GuestHouse[]>{
+    let queryParams=new HttpParams();
+    return this.http.get<GuestHouse[]>(`${this.apiServerUrl}/guesthouse/${id}`);
+  }
 }

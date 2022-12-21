@@ -16,6 +16,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { AlpinehutEditComponent } from './components/alpinehut-edit/alpinehut-edit.component';
 import { AddingGuestshousesComponent } from './components/adding-guestshouses/adding-guestshouses.component';
+import { EditingGuesthousesComponent } from './components/editing-guesthouses/editing-guesthouses.component';
 const routes:Routes=[
 
 
@@ -32,7 +33,8 @@ const routes:Routes=[
     SignupComponent,
     LoginComponent,
     AlpinehutEditComponent,
-    AddingGuestshousesComponent
+    AddingGuestshousesComponent,
+    EditingGuesthousesComponent
   ],
   imports: [
     BrowserModule,

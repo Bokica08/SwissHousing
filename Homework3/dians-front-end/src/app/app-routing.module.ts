@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddingGuestshousesComponent } from './components/adding-guestshouses/adding-guestshouses.component';
 import { AlpinehutComponent } from './components/alpinehut/alpinehut.component';
 import { CampsiteComponent } from './components/campsite/campsite.component';
+import { EditingGuesthousesComponent } from './components/editing-guesthouses/editing-guesthouses.component';
 import { GuesthouseComponent } from './components/guesthouse/guesthouse.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListComponent } from './components/list/list.component';
@@ -39,6 +40,9 @@ const routes: Routes = [
   },
   {
     path:'add-guesth',component:AddingGuestshousesComponent
+  },
+  {
+    path:'edit-guesth/:id',component:EditingGuesthousesComponent
   }
 
 ];

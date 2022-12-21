@@ -42,8 +42,7 @@
                                         <li class="list-group-item">
                                         <div class="card-body">
                                             <div class="float-right btn-group btn-group-sm">
-                                                <a class="btn btn-danger tooltips" data-placement="top" data-original-title="Edit"><i
-                                                        class="fa fa-pencil"></i> Edit</a>
+                                                <button class="btn btn-danger tooltips" data-placement="top" data-original-title="Edit" (click)="getHouse(guesthouse.locationId)">Edit</button>
                                                <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
                                                         class="fa fa-times"  (click)="test()"></i>Delete</a>-->
                                                         <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteGHouse(guesthouse.locationId)">Delete</button>

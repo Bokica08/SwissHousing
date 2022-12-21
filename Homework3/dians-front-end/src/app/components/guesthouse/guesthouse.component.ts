@@ -2,6 +2,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/config/config.service';
 import { GuestHouse } from 'src/app/guest-house.model';
+import { Router} from "@angular/router";
+import { state } from '@angular/animations';
 
 @Component({
   selector: 'app-guesthouse',
@@ -10,9 +12,11 @@ import { GuestHouse } from 'src/app/guest-house.model';
 })
 export class GuesthouseComponent implements OnInit{
   public guesthouses:GuestHouse[] | undefined;
+  
   filterBy;
   dropDownResult;
   showNoResult;
+  router: any;
 
 
   title(title: any) {
@@ -23,6 +27,7 @@ export class GuesthouseComponent implements OnInit{
   constructor(private configService:ConfigService){}
   ngOnInit(): void {
     this.getHouses();
+    
   }
 
 
@@ -113,6 +118,12 @@ export class GuesthouseComponent implements OnInit{
   deleteGHouse(id:number){
     this.configService.deleteHouse(id).subscribe(); 
     window.location.reload()
+  }
+  getHouse(id:number)
+  {
+    console.log(id);
+    window.location.href = "http://localhost:4200/edit-guesth/"+id;
+
   }
 
 }
