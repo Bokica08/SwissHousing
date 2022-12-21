@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/config/config.service';
 import { AlpineHut } from 'src/app/alpinehut';
@@ -20,7 +20,7 @@ export class AlpinehutComponent implements OnInit{
   }
 
 
-  constructor(private configService:ConfigService){}
+  constructor(private configService:ConfigService,private httpClient:HttpClient){}
   ngOnInit(): void {
     this.getHuts();
   }
@@ -110,10 +110,10 @@ export class AlpinehutComponent implements OnInit{
     }
     
   }
-  deleteH(name:number){
-    console.log("Test")
-    console.log(name)
-    this.configService.deleteHut(name);
+  deleteH(id:number){
+    this.configService.deleteHut(id).subscribe(); 
+    window.location.reload()
+
   }
 
 

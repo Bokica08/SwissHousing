@@ -10,7 +10,7 @@ import { Register } from './signup.model';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit{
-  roles=[{id:1, value:'ROLE_USER', name:"User"},{id:2, value:'ROLE_PENDING_ADMIN', name:"Admin"}]
+roles=[{id:1, value:'ROLE_USER', name:"User"},{id:2, value:'ROLE_PENDING_ADMIN', name:"Admin"}]
 signup=new Register();
 
   constructor(private dataserivce:dataService,private httpClient:HttpClient){}
@@ -23,7 +23,6 @@ submit(f:NgForm)
   //this.signup.role="ROLE_USER";
   //this.signup.surname="tr"
     console.log(this.signup);
-
 this.httpClient.post<any>("http://localhost:8080/register",this.signup)
 .subscribe(res=>{
   console.log(this.signup);

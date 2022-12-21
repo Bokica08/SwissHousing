@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/config/config.service';
 import { CampSite } from 'src/app/camp-site.model';
@@ -20,7 +20,7 @@ export class CampsiteComponent implements OnInit{
   }
 
 
-  constructor(private configService:ConfigService){}
+  constructor(private configService:ConfigService,private httpClient:HttpClient){}
   ngOnInit(): void {
     this.getCamps();
   }
@@ -110,10 +110,9 @@ export class CampsiteComponent implements OnInit{
     }
     
   }
-  deleteCamp(name:number){
-    console.log("Test")
-    console.log(name)
-    this.configService.deleteCamp(name);
+  deleteCamp(id:number){
+    this.configService.deleteCamp(id).subscribe(); 
+    window.location.reload()
   }
 
 }

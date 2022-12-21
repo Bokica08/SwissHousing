@@ -60,16 +60,16 @@ export class ConfigService {
   }
 
   public deleteEmployee(employeeId: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/hotel/delete/${employeeId}`);
+    return this.http.get<void>(`${this.apiServerUrl}/location/delete/${employeeId}`);
   }
   public deleteHut(hutid: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/alpinehut/delete/${hutid}`);
+    return this.http.get<void>(`${this.apiServerUrl}/location/delete/${hutid}`);
   }
   public deleteHouse(houseid: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/guesthouse/delete/${houseid}`);
+    return this.http.get<void>(`${this.apiServerUrl}/location/delete/${houseid}`);
   }
   public deleteCamp(campid: number): Observable<void> {
-    return this.http.delete<void>(`${this.apiServerUrl}/campsite/delete/${campid}`);
+    return this.http.get<void>(`${this.apiServerUrl}/location/delete/${campid}`);
   }
   public getByCity(city:string):Observable<Employee[]>{
     let queryParams= new HttpParams();

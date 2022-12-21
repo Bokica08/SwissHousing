@@ -144,9 +144,8 @@ export class ListComponent implements OnInit{
     
   }
   deleteHotel(name:number){
-    console.log("Test")
-    console.log(name)
-    this.configService.deleteEmployee(name);
+    this.configService.deleteEmployee(name).subscribe();
+    window.location.reload()
   }
 
 }

@@ -110,10 +110,9 @@ export class GuesthouseComponent implements OnInit{
     }
     
   }
-  deleteGHouse(name:number){
-    console.log("Test")
-    console.log(name)
-    this.configService.deleteHut(name);
+  deleteGHouse(id:number){
+    this.configService.deleteHouse(id).subscribe(); 
+    window.location.reload()
   }
 
 }
