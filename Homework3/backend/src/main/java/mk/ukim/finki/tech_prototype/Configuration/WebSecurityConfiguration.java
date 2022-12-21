@@ -32,7 +32,7 @@ public class WebSecurityConfiguration{
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests()
+        /*http.csrf().disable().authorizeHttpRequests()
                 .requestMatchers("/", "/csv/**", "/assests/**", "/register").permitAll()
                 .requestMatchers("/review/**").hasRole("USER")
                 .requestMatchers("/alpinehut", "/alpinehut/{id}", "/alpinehut/name", "/alpinehut/cname", "/alpinehut/city").permitAll()
@@ -61,7 +61,8 @@ public class WebSecurityConfiguration{
                 .invalidateHttpSession(true)
                 .deleteCookies("JSESSIONID")
                 .logoutSuccessUrl("/login")
-                .and();
+                .and();*/
+        http.authorizeHttpRequests().anyRequest().permitAll();
         return http.build();
     }
 }
