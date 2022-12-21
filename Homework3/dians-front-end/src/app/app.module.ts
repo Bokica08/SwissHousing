@@ -14,6 +14,7 @@ import { GuesthouseComponent } from './components/guesthouse/guesthouse.componen
 import { CampsiteComponent } from './components/campsite/campsite.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
+import { AddingGuestshousesComponent } from './components/adding-guestshouses/adding-guestshouses.component';
 const routes:Routes=[
 
 
@@ -28,7 +29,8 @@ const routes:Routes=[
     GuesthouseComponent,
     CampsiteComponent,
     SignupComponent,
-    LoginComponent
+    LoginComponent,
+    AddingGuestshousesComponent
   ],
   imports: [
     BrowserModule,

@@ -62,7 +62,7 @@ public class WebSecurityConfiguration{
                 .deleteCookies("JSESSIONID")
                 .logoutSuccessUrl("/login")
                 .and();*/
-        http.authorizeHttpRequests().anyRequest().permitAll();
+        http.csrf().disable().authorizeHttpRequests().anyRequest().permitAll();
         return http.build();
     }
 }
