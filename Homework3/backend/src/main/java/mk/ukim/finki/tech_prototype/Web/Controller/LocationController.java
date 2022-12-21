@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/location")
+@CrossOrigin(origins = "http://localhost:4200")
 public class LocationController {
     private final LocationService locationService;
 
@@ -20,7 +21,7 @@ public class LocationController {
     {
         return locationService.findById(id);
     }
-    @DeleteMapping("/delete/{id}")
+    @GetMapping("/delete/{id}")
     public ResponseEntity deleteById(@PathVariable Long id)
     {
         this.locationService.deleteById(id);
