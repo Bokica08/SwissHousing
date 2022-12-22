@@ -14,6 +14,7 @@ import { LoginComponent } from './components/login/login.component';
 import { MapComponentComponent } from './components/map-component/map-component.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { dataResolverService, dataResolverServiceCamp, dataResolverServiceHouse, dataResolverServiceHut } from './resolver/dataResolverService';
+import { EditingCampsComponent } from './components/editing-camps/editing-camps.component';
 
 const routes: Routes = [
   {
@@ -55,6 +56,9 @@ const routes: Routes = [
   },
   {
     path:'edit-guesth/:id',component:EditingGuesthousesComponent
+  },
+  {
+    path:'edit-camp/:id',component:EditingCampsComponent
   }
 
 ];

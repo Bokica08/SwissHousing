@@ -114,5 +114,12 @@ export class CampsiteComponent implements OnInit{
     this.configService.deleteCamp(id).subscribe(); 
     window.location.reload()
   }
+  getCamp(id:number)
+  {
+    console.log(id);
+    window.location.href = "http://localhost:4200/edit-camp/"+id;
+
+  }
+
 
 }

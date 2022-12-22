@@ -14,12 +14,12 @@ import { GuesthouseComponent } from './components/guesthouse/guesthouse.componen
 import { CampsiteComponent } from './components/campsite/campsite.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
-import { AlpinehutEditComponent } from './components/alpinehut-edit/alpinehut-edit.component';
 import { AddingGuestshousesComponent } from './components/adding-guestshouses/adding-guestshouses.component';
 import { EditingGuesthousesComponent } from './components/editing-guesthouses/editing-guesthouses.component';
 import { AddingHotelsComponent } from './components/adding-hotels/adding-hotels.component';
 import { AddingCampsComponent } from './components/adding-camps/adding-camps.component';
 import { AddingHutsComponent } from './components/adding-huts/adding-huts.component';
+import { EditingCampsComponent } from './components/editing-camps/editing-camps.component';
 const routes:Routes=[
 
 
@@ -35,12 +35,12 @@ const routes:Routes=[
     CampsiteComponent,
     SignupComponent,
     LoginComponent,
-    AlpinehutEditComponent,
     AddingGuestshousesComponent,
     EditingGuesthousesComponent,
     AddingHotelsComponent,
     AddingCampsComponent,
-    AddingHutsComponent
+    AddingHutsComponent,
+    EditingCampsComponent
   ],
   imports: [
     BrowserModule,
