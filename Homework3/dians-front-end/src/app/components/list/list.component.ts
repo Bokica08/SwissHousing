@@ -147,5 +147,10 @@ export class ListComponent implements OnInit{
     this.configService.deleteEmployee(name).subscribe();
     window.location.reload()
   }
+  getHotel(id:number)
+  {
+    console.log(id);
+    window.location.href = "http://localhost:4200/edit-hotel/"+id;
 
+  }
 }
