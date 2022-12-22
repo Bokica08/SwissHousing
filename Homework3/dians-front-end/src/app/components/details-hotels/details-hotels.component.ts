@@ -2,14 +2,14 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ConfigService } from 'src/app/config/config.service';
-import {Hotel} from '../adding-hotels/adding-hotels.model'
+import { Hotel } from '../adding-hotels/adding-hotels.model';
 
 @Component({
-  selector: 'app-editing-hotels',
-  templateUrl: './editing-hotels.component.html',
-  styleUrls: ['./editing-hotels.component.css']
+  selector: 'app-details-hotels',
+  templateUrl: './details-hotels.component.html',
+  styleUrls: ['./details-hotels.component.css']
 })
-export class EditingHotelsComponent implements OnInit{
+export class DetailsHotelsComponent implements OnInit{
   hotel=new Hotel();
   id:string
   constructor(private httpClient:HttpClient,private route: ActivatedRoute,private configService:ConfigService){}
@@ -26,16 +26,7 @@ export class EditingHotelsComponent implements OnInit{
         alert(error.message);
       }
       
+      
     );
       }
-
-submit()
-{
-  console.log(this.hotel);
-  this.httpClient.post<any>("http://localhost:8080/hotel/edit/"+this.id,this.hotel)
-.subscribe(res=>{
-  console.log(this.hotel);
-})
-window.location.href = "http://localhost:4200/hotels";
-}
 }

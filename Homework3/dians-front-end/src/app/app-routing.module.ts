@@ -17,6 +17,10 @@ import { dataResolverService, dataResolverServiceCamp, dataResolverServiceHouse,
 import { EditingCampsComponent } from './components/editing-camps/editing-camps.component';
 import { EditingHotelsComponent } from './components/editing-hotels/editing-hotels.component';
 import { EditingHutsComponent } from './components/editing-huts/editing-huts.component';
+import { DetailsAlpinehutComponent } from './components/details-alpinehut/details-alpinehut.component';
+import { DetailsGuesthousesComponent } from './components/details-guesthouses/details-guesthouses.component';
+import { DetailsCampsComponent } from './components/details-camps/details-camps.component';
+import { DetailsHotelsComponent } from './components/details-hotels/details-hotels.component';
 
 const routes: Routes = [
   {
@@ -67,6 +71,18 @@ const routes: Routes = [
   },
   {
     path:'edit-hut/:id',component:EditingHutsComponent
+  },
+  {
+    path:'hut-details/:id',component:DetailsAlpinehutComponent
+  },
+  {
+    path:'house-details/:id',component:DetailsGuesthousesComponent
+  },
+  {
+    path:'camp-details/:id',component:DetailsCampsComponent
+  },
+  {
+    path:'hotel-details/:id',component:DetailsHotelsComponent
   }
 
 ];

@@ -1,0 +1,42 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="project-info-box mt-0">
+                <h5>{{hotel.name}}</h5>
+                <p class="mb-0">{{hotel.description}}</p>
+            </div><!-- / project-info-box -->
+
+            <div class="project-info-box">
+                <p><b>City: </b>{{hotel.city}}</p>
+                <p><b>Address:</b> {{hotel.street}} No.{{hotel.houseNumber}}</p>
+                <p><b>Phone number: </b>{{hotel.phoneNumber}}</p>
+                <p><b>Stars: </b>{{hotel.stars}}/5</p>
+                <p><b>Website: </b><a target="_blank" href="https://{{hotel.website}}">{{hotel.website}}</a></p>
+                <p><b>X coordinate: </b>{{hotel.x}}</p>
+                <p><b>Y coordinate: </b>{{hotel.y}}</p>
+
+            </div><!-- / project-info-box -->
+
+            <div class="project-info-box mt-0 mb-0">
+                <p class="mb-0">
+                    <a class="btn btn-danger" href="http://localhost:4200/hotels" role="button">&laquo; Back</a>
+                </p>
+            </div><!-- / project-info-box -->
+        </div><!-- / column -->
+
+        <div class="col-md-7 mt-3">
+            <img src="{{hotel.imagePath}}" alt="Github" class="rounded">
+            <div class="project-info-box">  
+                <div class="card">
+                    <h5 class="card-header">Featured</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div><!-- / project-info-box -->
+        </div><!-- / column -->
+    </div>
+</div>

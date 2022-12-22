@@ -22,6 +22,10 @@ import { AddingHutsComponent } from './components/adding-huts/adding-huts.compon
 import { EditingCampsComponent } from './components/editing-camps/editing-camps.component';
 import { EditingHotelsComponent } from './components/editing-hotels/editing-hotels.component';
 import { EditingHutsComponent } from './components/editing-huts/editing-huts.component';
+import { DetailsAlpinehutComponent } from './components/details-alpinehut/details-alpinehut.component';
+import { DetailsGuesthousesComponent } from './components/details-guesthouses/details-guesthouses.component';
+import { DetailsCampsComponent } from './components/details-camps/details-camps.component';
+import { DetailsHotelsComponent } from './components/details-hotels/details-hotels.component';
 const routes:Routes=[
 
 
@@ -44,7 +48,11 @@ const routes:Routes=[
     AddingHutsComponent,
     EditingCampsComponent,
     EditingHotelsComponent,
-    EditingHutsComponent
+    EditingHutsComponent,
+    DetailsAlpinehutComponent,
+    DetailsGuesthousesComponent,
+    DetailsCampsComponent,
+    DetailsHotelsComponent,
   ],
   imports: [
     BrowserModule,

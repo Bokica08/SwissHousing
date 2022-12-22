@@ -1,0 +1,40 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="project-info-box mt-0">
+                <h5>{{hut.name}}</h5>
+                <p class="mb-0">{{hut.description}}</p>
+            </div><!-- / project-info-box -->
+
+            <div class="project-info-box">
+                <p><b>City: </b>{{hut.city}}</p>
+                <p><b>Address:</b> {{hut.street}} No.{{hut.houseNumber}}</p>
+                <p><b>Elevation:</b> {{hut.elevation}}</p>
+                <p><b>X coordinate: </b>{{hut.x}}</p>
+                <p><b>Y coordinate: </b>{{hut.y}}</p>
+            </div><!-- / project-info-box -->
+
+            <div class="project-info-box mt-0 mb-0">
+                <p class="mb-0">
+                    <a class="btn btn-danger" href="http://localhost:4200/huts" role="button">&laquo; Back</a>
+
+                </p>
+            </div><!-- / project-info-box -->
+        </div><!-- / column -->
+
+        <div class="col-md-7 mt-3">
+            <img src="{{hut.imagePath}}" alt="project-image" class="rounded">
+            <div class="project-info-box">
+                <div class="card">
+                    <h5 class="card-header">Featured</h5>
+                    <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+            </div><!-- / project-info-box -->
+        </div><!-- / column -->
+    </div>
+</div>

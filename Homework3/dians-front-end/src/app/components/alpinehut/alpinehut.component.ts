@@ -121,6 +121,11 @@ export class AlpinehutComponent implements OnInit{
     window.location.href = "http://localhost:4200/edit-hut/"+id;
 
   }
+  getHutForDetails(id:number)
+  {
+    console.log(id);
 
+    window.location.href="http://localhost:4200/hut-details/"+id
+  }
 
 }
