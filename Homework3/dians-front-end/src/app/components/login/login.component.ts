@@ -14,7 +14,11 @@ export class LoginComponent implements OnInit{
   }
 submit()
 {
-  this.httpClient.post<any>("http://localhost:8080/login",this.login)
+  console.log(this.login.username);
+  console.log(this.login.password);
+  
+  
+  this.httpClient.post<any>("http://localhost:8080/login",{username:this.login.username, password:this.login.password})
 .subscribe(res=>{
   console.log(this.login);
   
