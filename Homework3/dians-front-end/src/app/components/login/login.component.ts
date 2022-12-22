@@ -18,7 +18,7 @@ submit()
   console.log(this.login.password);
   
   
-  this.httpClient.post<any>("http://localhost:8080/login",{username:this.login.username, password:this.login.password})
+  this.httpClient.post<any>("http://localhost:8080/api/user/authenticate",JSON.stringify(this.login))
 .subscribe(res=>{
   console.log(this.login);
   

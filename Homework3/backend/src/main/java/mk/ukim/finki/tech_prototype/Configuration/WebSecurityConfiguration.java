@@ -1,5 +1,6 @@
 package mk.ukim.finki.tech_prototype.Configuration;
 
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -7,8 +8,9 @@ import org.springframework.security.config.annotation.authentication.builders.Au
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
-import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
@@ -22,9 +24,10 @@ import java.util.Arrays;
 @CrossOrigin
 public class WebSecurityConfiguration{
     private final CustomUsernamePasswordAuthenticationProvider customUsernamePasswordAuthenticationProvider;
-
-    public WebSecurityConfiguration(CustomUsernamePasswordAuthenticationProvider customUsernamePasswordAuthenticationProvider) {
+    private final JwtFilterRequest jwtFilterRequest;
+    public WebSecurityConfiguration(CustomUsernamePasswordAuthenticationProvider customUsernamePasswordAuthenticationProvider, JwtFilterRequest jwtFilterRequest) {
         this.customUsernamePasswordAuthenticationProvider = customUsernamePasswordAuthenticationProvider;
+        this.jwtFilterRequest = jwtFilterRequest;
     }
 
     @Bean
@@ -37,6 +40,21 @@ public class WebSecurityConfiguration{
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and();
+        http = http
+                .exceptionHandling()
+                .authenticationEntryPoint(
+                        (request, response, ex) -> {
+                            response.sendError(
+                                    HttpServletResponse.SC_UNAUTHORIZED,
+                                    ex.getMessage()
+                            );
+                        }
+                )
+                .and();
+        http.addFilterBefore(this.jwtFilterRequest, UsernamePasswordAuthenticationFilter.class);
         http.cors().and().
         csrf().disable().authorizeHttpRequests()
                 .requestMatchers("/", "/csv/**", "/assets/**", "/register").permitAll()
