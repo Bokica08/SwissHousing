@@ -16,6 +16,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { dataResolverService, dataResolverServiceCamp, dataResolverServiceHouse, dataResolverServiceHut } from './resolver/dataResolverService';
 import { EditingCampsComponent } from './components/editing-camps/editing-camps.component';
 import { EditingHotelsComponent } from './components/editing-hotels/editing-hotels.component';
+import { EditingHutsComponent } from './components/editing-huts/editing-huts.component';
 
 const routes: Routes = [
   {
@@ -63,6 +64,9 @@ const routes: Routes = [
   },
   {
     path:'edit-hotel/:id',component:EditingHotelsComponent
+  },
+  {
+    path:'edit-hut/:id',component:EditingHutsComponent
   }
 
 ];
