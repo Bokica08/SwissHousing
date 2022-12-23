@@ -13,7 +13,7 @@ import { ListComponent } from './components/list/list.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponentComponent } from './components/map-component/map-component.component';
 import { SignupComponent } from './components/signup/signup.component';
-import { dataResolverService, dataResolverServiceCamp, dataResolverServiceHouse, dataResolverServiceHut } from './resolver/dataResolverService';
+import {dataResolverServiceHotel,dataResolverServiceCamp, dataResolverServiceHouse, dataResolverServiceHut } from './resolver/dataResolverService';
 import { EditingCampsComponent } from './components/editing-camps/editing-camps.component';
 import { EditingHotelsComponent } from './components/editing-hotels/editing-hotels.component';
 import { EditingHutsComponent } from './components/editing-huts/editing-huts.component';
@@ -24,7 +24,7 @@ import { DetailsHotelsComponent } from './components/details-hotels/details-hote
 
 const routes: Routes = [
   {
-    path: 'map', component: MapComponentComponent,resolve:{data:dataResolverService,data2:dataResolverServiceHut,
+    path: 'map', component: MapComponentComponent,resolve:{data:dataResolverServiceHotel,data2:dataResolverServiceHut,
       data3:dataResolverServiceCamp,data4:dataResolverServiceHouse}
   },
   {

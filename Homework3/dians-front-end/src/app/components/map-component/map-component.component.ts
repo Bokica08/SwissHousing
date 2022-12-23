@@ -45,6 +45,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
     throw new Error('Method not implemented.');
   }
 
+
   public getEmployees(): void {
   
     this.configService.getEmployees().subscribe(
@@ -88,7 +89,80 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
     );
   }
 
-  
+  bHotels()
+  {
+    var btn= document.getElementById('hotel')   
+    if(this.hotels!=undefined)
+    {
+      this.hotels=undefined
+      btn.style.color='lightgray'
+    }
+    else
+    {
+      this.hotels=this.activateRoute.snapshot.data['data'];
+      btn.style.color='black'
+
+    }
+
+
+
+    this.showMap()
+    
+  }
+  bHuts()
+  {
+    var btn= document.getElementById('hut')   
+    if(this.huts!=undefined)
+    {
+      this.huts=undefined
+      btn.style.color='lightgray'
+
+    }
+    else
+    {
+      this.huts=this.activateRoute.snapshot.data['data2']
+      btn.style.color='black'
+
+
+    }
+    
+    this.showMap()
+    
+  }
+  bHouses()
+  {
+    var btn= document.getElementById('house')   
+    if(this.houses!=undefined)
+    {
+      this.houses=undefined
+      btn.style.color='lightgray'
+
+    }
+    else
+    {
+      this.houses=this.activateRoute.snapshot.data['data4']
+      btn.style.color='black'
+
+    }
+    this.showMap()
+  }
+  bSites()
+  {
+    var btn= document.getElementById('camp')   
+    if(this.camps!=undefined)
+    {
+      this.camps=undefined;
+      btn.style.color='lightgray'
+    }
+    else
+    {
+      this.camps=this.activateRoute.snapshot.data['data3']
+      btn.style.color='black'
+
+    }
+    this.showMap()
+    
+  }
    ngOnInit():void {
     this.showMap();
 
@@ -193,7 +267,7 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
         coords: [1, 1, 1, 20, 18, 20, 18, 1],
         type: "poly",
       };
-      
+      if(this.hotels!=undefined){
       for(let hotel of Object.values(this.hotels)){
         const location1={
           lat:hotel.y,
@@ -211,6 +285,8 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
           })
           
       }
+    }
+      if(this.huts!=undefined){
       for(let hut of Object.values(this.huts)){
         const location2={
           lat:hut.y,
@@ -230,6 +306,8 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
 
           
       }
+    }
+      if(this.camps!=undefined){
       for(let camp of Object.values(this.camps)){
         const location3={
           lat:camp.y,
@@ -249,15 +327,17 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
 
           
       }
+    }
+    if(this.houses!=undefined){
       for(let house of Object.values(this.houses)){
-        const location4={
+        const location3={
           lat:house.y,
           lng:house.x
         }
         console.log(house)
 
-          const marker4 = new google.maps.Marker({
-            position:location4,
+          const marker3 = new google.maps.Marker({
+            position:location3,
             map:this.map,
             title:house.city,
             icon:yellow,
@@ -267,11 +347,16 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
           })
 
           
-      }      
+      }
+    }
+      
       
     })
 
 
   }
+
+
 }
+
 
