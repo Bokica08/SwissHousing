@@ -26,6 +26,7 @@ import { DetailsAlpinehutComponent } from './components/details-alpinehut/detail
 import { DetailsGuesthousesComponent } from './components/details-guesthouses/details-guesthouses.component';
 import { DetailsCampsComponent } from './components/details-camps/details-camps.component';
 import { DetailsHotelsComponent } from './components/details-hotels/details-hotels.component';
+import { httpInterceptorProviders } from './_helpers/http.interceptor';
 const routes:Routes=[
 
 
@@ -61,7 +62,7 @@ const routes:Routes=[
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [ConfigService],
+  providers: [ConfigService, httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

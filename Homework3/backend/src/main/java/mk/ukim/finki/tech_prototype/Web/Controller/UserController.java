@@ -1,6 +1,6 @@
 package mk.ukim.finki.tech_prototype.Web.Controller;
 
-import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 import mk.ukim.finki.tech_prototype.Model.*;
 import mk.ukim.finki.tech_prototype.Service.UserService;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +11,7 @@ import java.util.*;
 
 @RestController
 @RequestMapping("/user")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", maxAge = 3600)
 public class UserController {
 
     private final UserService userService;

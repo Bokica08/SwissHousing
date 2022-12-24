@@ -4,20 +4,20 @@
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
           <div class="card bg-dark text-white" style="border-radius: 1rem;">
             <div class="card-body p-5 text-center">
-                <form #f="ngForm" (ngSubmit)="submit()">
+                <form #f="ngForm" (ngSubmit)="onSubmit()">
               <div class="mb-md-5 mt-md-4 pb-5">
   
                 <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                 <p class="text-white-50 mb-5">Please enter your username and password!</p>
 
                 <div class="form-outline form-white mb-4">
-                  <input required #username="ngModel" type="text" id="typeEmailX" class="form-control form-control-lg" name="username" [(ngModel)]="login.username" />
+                  <input required #username="ngModel" type="text" id="typeEmailX" class="form-control form-control-lg" name="username" [(ngModel)]="form.username" />
                   <label class="form-label" for="username">Username</label><br>
                   <span *ngIf="(username.invalid && username.touched) || (f.submitted && username.invalid)" class="error text-danger">Username filed is required</span>
 
                 </div>
                 <div class="form-outline form-white mb-4">
-                  <input required #password="ngModel" type="password" id="typePasswordX" class="form-control form-control-lg" name="password" [(ngModel)]="login.password" />
+                  <input required #password="ngModel" type="password" id="typePasswordX" class="form-control form-control-lg" name="password" [(ngModel)]="form.password" />
                   <label class="form-label" for="password">Password</label><br>
                   <span *ngIf="password.invalid && password.touched  || (f.submitted && password.invalid)" class="error text-danger">Password filed is required</span>
 
