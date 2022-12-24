@@ -7,6 +7,7 @@ import { NgForm } from '@angular/forms';
 import { AlpineHut } from 'src/app/alpinehut';
 import { AuthService } from '../../_services/auth.service';
 import { StorageService } from '../../_services/storage.service';
+import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -26,26 +27,47 @@ export class AppComponent implements OnInit {
   public isCollapsed = true;
 
 
+
+
   private roles: string[] = [];
   isLoggedIn = false;
   showAdminBoard = false;
   showModeratorBoard = false;
   username?: string;
 
-  constructor(private employeeService: ConfigService, private storageService: StorageService, private authService: AuthService) { }
+  constructor(private employeeService: ConfigService, private storageService: StorageService, private authService: AuthService,private activateRoute: ActivatedRoute,) {
+    debugger;
+    //this.isLoggedIn=this.activateRoute.snapshot.data['data5']
+   }
+  //  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+  //   debugger;
+  //   throw new Error('Method not implemented.');
+  // }
 
   ngOnInit() {
-    this.isLoggedIn = this.storageService.isLoggedIn();
-
-    if (this.isLoggedIn) {
+    // if(this.isLoggedIn==undefined || this.isLoggedIn==null){
+    //   if (this.isLoggedIn) {
+    //     const user = this.storageService.getUser();
+    //     this.roles = user.roles;
+  
+    //     this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+    //     this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+  
+    //     this.username = user.username;
+    //   }
+    // }else{
+      this.isLoggedIn=this.storageService.isLoggedIn();
       const user = this.storageService.getUser();
-      this.roles = user.roles;
+        this.roles = user.roles;
+  
+        this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+        this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+  
+        this.username = user.username;
+    //}
+    //this.isLoggedIn = this.storageService.isLoggedIn();
 
-      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-
-      this.username = user.username;
-    }
+    
     
 
   }
@@ -178,12 +200,14 @@ export class AppComponent implements OnInit {
     return typeof value === 'object'; }
 
     logout(): void {
+      debugger;
       this.authService.logout().subscribe({
         next: res => {
           console.log(res);
           this.storageService.clean();
   
           window.location.reload();
+          this.ngOnInit();
         },
         error: err => {
           console.log(err);

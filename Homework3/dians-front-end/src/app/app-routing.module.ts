@@ -13,7 +13,7 @@ import { ListComponent } from './components/list/list.component';
 import { LoginComponent } from './components/login/login.component';
 import { MapComponentComponent } from './components/map-component/map-component.component';
 import { SignupComponent } from './components/signup/signup.component';
-import {dataResolverServiceHotel,dataResolverServiceCamp, dataResolverServiceHouse, dataResolverServiceHut } from './resolver/dataResolverService';
+import {dataResolverServiceHotel,dataResolverServiceCamp, dataResolverServiceHouse, dataResolverServiceHut, dataResolverLoggedIn } from './resolver/dataResolverService';
 import { EditingCampsComponent } from './components/editing-camps/editing-camps.component';
 import { EditingHotelsComponent } from './components/editing-hotels/editing-hotels.component';
 import { EditingHutsComponent } from './components/editing-huts/editing-huts.component';
@@ -28,10 +28,10 @@ const routes: Routes = [
       data3:dataResolverServiceCamp,data4:dataResolverServiceHouse}
   },
   {
-    path: 'hotels', component: ListComponent
+    path: 'hotels', component: ListComponent,resolve:{data5:dataResolverLoggedIn}
   },
   {
-    path:'home',component:HomeComponent
+    path:'home',component:HomeComponent,resolve:{data5:dataResolverLoggedIn}
   },
   {
     path:'huts',component:AlpinehutComponent

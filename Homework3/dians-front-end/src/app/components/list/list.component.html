@@ -45,12 +45,17 @@
                         <li class="list-group-item">
                             <div class="card-body">
                                 <div class="float-right btn-group btn-group-sm">
+                                    <ng-container *ngIf="isLoggedIn==true">
+                                        
+                                        
                                     <button class="btn btn-danger tooltips" data-placement="top" data-original-title="Edit" (click)="getHotel(employee.locationId)">Edit</button>
 
                                    <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
                                             class="fa fa-times"  (click)="test()"></i>Delete</a>-->
+                                            
                                             <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteHotel(employee.locationId)">Delete</button>
-                                </div>
+                                            </ng-container>
+                                        </div>
                             </div>
                         </li>
                     </ul>

@@ -1,5 +1,6 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { ConfigService } from 'src/app/config/config.service';
 import { Employee } from 'src/app/employee';
 
@@ -14,6 +15,14 @@ export class ListComponent implements OnInit{
   filterBy;
   dropDownResult;
   showNoResult;
+  isLoggedIn: any;
+  storageService: any;
+  roles: any;
+  showAdminBoard: any;
+  showModeratorBoard: any;
+  username: any;
+
+
 
 
   title(title: any) {
@@ -21,9 +30,38 @@ export class ListComponent implements OnInit{
   }
 
 
-  constructor(private configService:ConfigService){}
+  constructor(private configService:ConfigService,private activateRoute: ActivatedRoute){
+    debugger;
+    this.isLoggedIn=this.activateRoute.snapshot.data['data5']
+    //this.isLoggedIn = this.storageService.isLoggedIn();
+  }
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    throw new Error('Method not implemented.');
+  }
+
   ngOnInit(): void {
+    debugger;
     this.getEmployees();
+    
+    //this.isLoggedIn=this.activateRoute.snapshot.data['data5']
+    if (this.isLoggedIn) {
+      console.log("if")
+      const user = this.storageService.getUser();
+      this.roles = user.roles;
+      debugger
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+      debugger
+
+      this.username = user.username;
+    }else{
+      console.log("else")
+      console.log(this.isLoggedIn);
+    }
+    console.log(this.isLoggedIn);
+    debugger
   }
 
 

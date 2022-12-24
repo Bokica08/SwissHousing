@@ -25,7 +25,11 @@ submit(f:NgForm)
     console.log(this.signup);
 this.httpClient.post<any>("http://localhost:8080/register",this.signup)
 .subscribe(res=>{
+  if(res!=null && res!=undefined){
+    location.href="/login";
+  console.log(res);
   console.log(this.signup);
+  }
   
 })
 }
