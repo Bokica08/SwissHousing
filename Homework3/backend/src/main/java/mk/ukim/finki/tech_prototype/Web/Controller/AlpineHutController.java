@@ -4,6 +4,7 @@ import mk.ukim.finki.tech_prototype.Model.AlpineHut;
 import mk.ukim.finki.tech_prototype.Model.DTO.AlpineHutDTO;
 import mk.ukim.finki.tech_prototype.Service.AlpineHutService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -51,6 +52,7 @@ public class AlpineHutController {
                 .map(alpineHut -> ResponseEntity.ok().body(alpineHut))
                 .orElseGet(()->ResponseEntity.badRequest().build());
     }
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<AlpineHut> save(@RequestBody AlpineHutDTO alpineHutDTO)
     {

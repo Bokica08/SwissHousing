@@ -4,6 +4,7 @@ import mk.ukim.finki.tech_prototype.Model.CampSite;
 import mk.ukim.finki.tech_prototype.Model.DTO.CampSiteDTO;
 import mk.ukim.finki.tech_prototype.Service.CampSiteService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -51,6 +52,7 @@ public class CampSiteController {
                 .map(campSite -> ResponseEntity.ok().body(campSite))
                 .orElseGet(()->ResponseEntity.badRequest().build());
     }
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<CampSite> save(@RequestBody CampSiteDTO campSiteDTO)
     {

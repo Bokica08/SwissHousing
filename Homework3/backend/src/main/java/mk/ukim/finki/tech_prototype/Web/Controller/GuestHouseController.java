@@ -4,6 +4,7 @@ import mk.ukim.finki.tech_prototype.Model.DTO.GuestHouseDTO;
 import mk.ukim.finki.tech_prototype.Model.GuestHouse;
 import mk.ukim.finki.tech_prototype.Service.GuestHouseService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -51,6 +52,7 @@ public class GuestHouseController {
                 .map(guestHouse -> ResponseEntity.ok().body(guestHouse))
                 .orElseGet(()->ResponseEntity.badRequest().build());
     }
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PostMapping("/add")
     public ResponseEntity<GuestHouse> save(@RequestBody GuestHouseDTO guestHouseDTO)
     {
