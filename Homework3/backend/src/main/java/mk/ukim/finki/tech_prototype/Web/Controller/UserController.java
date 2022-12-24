@@ -41,7 +41,7 @@ public class UserController {
         return userService.findAllPendingAdmins();
     }
     
-    @GetMapping("/user/addFavourite/{id}")
+    @GetMapping("/addFavourite/{id}")
     public ResponseEntity<User> addFavourite(@PathVariable Long id, HttpServletRequest request)
     {
         return this.userService.addToFavourites(request.getRemoteUser(), id)
@@ -49,7 +49,7 @@ public class UserController {
                 .orElseGet(()->ResponseEntity.badRequest().build());
     }
 
-    @GetMapping("/user/addVisited/{id}")
+    @GetMapping("/addVisited/{id}")
     public ResponseEntity<User> addVisited(@PathVariable Long id, HttpServletRequest request)
     {
         return this.userService.addToVisited(request.getRemoteUser(), id)
