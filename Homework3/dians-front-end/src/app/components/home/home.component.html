@@ -112,6 +112,7 @@
             
         </div>
     </div>
+    <ng-container *ngIf="isLoggedIn==false">   
     <div class="container mb-5 mt-5 lead">
         <div class="row">
             <div class="col-md-12">
@@ -119,12 +120,15 @@
             </div>
         </div>
     </div>
+    
     <div class="container mb-5 mt-5 lead">
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-4">
                 <p>Register to unlock additional features, such as marking your favourite places and adding reviews </p>
+                
                 <p class="text-center"><a class="btn btn-danger" href="/register" role="button">Register &raquo;</a></p>
+            
             </div>
             <div class="col-md-2"></div>
             <div class="col-md-4">
@@ -134,3 +138,4 @@
             <div class="col-md-1"></div>
         </div>
     </div>
+    </ng-container>

@@ -26,7 +26,7 @@ export class StorageService {
     return {};
   }
 
-  public isLoggedIn(): boolean {
+  public isLoggedIn():boolean {
     const user = window.sessionStorage.getItem(USER_KEY);
     if (user) {
       return true;

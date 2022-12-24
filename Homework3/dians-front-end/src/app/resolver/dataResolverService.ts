@@ -6,6 +6,7 @@ import { Employee } from "../employee";
 import { AlpineHut } from "../alpinehut";
 import { GuestHouse } from "../guest-house.model";
 import { CampSite } from "../camp-site.model";
+import { StorageService } from "../_services/storage.service";
 
 
 @Injectable({providedIn:'root'})
@@ -64,6 +65,23 @@ export class dataResolverServiceCamp implements Resolve<CampSite[]>{
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): CampSite[] | Observable<CampSite[]> | Promise<CampSite[]> {
         {
             return this.configService.getCamps();
+        }
+    }
+
+  
+}
+@Injectable({providedIn:'root'})
+export class dataResolverLoggedIn implements Resolve<boolean>{
+
+    constructor(private storageService:StorageService){
+
+    }
+
+
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
+        {
+            debugger;
+            return this.storageService.isLoggedIn();
         }
     }
 
