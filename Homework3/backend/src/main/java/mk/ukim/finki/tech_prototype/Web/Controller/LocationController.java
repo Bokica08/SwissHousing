@@ -29,13 +29,9 @@ public class LocationController {
     @GetMapping("/delete/{id}")
     public ResponseEntity deleteById(@PathVariable Long id, HttpServletRequest request)
     {
-        /*this.locationService.deleteById(id);
+        this.locationService.deleteById(id);
         if(this.locationService.findById(id).isEmpty()) return ResponseEntity.ok().build();
-        return ResponseEntity.badRequest().build();*/
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println(auth.getAuthorities());
-        System.out.println(auth.getPrincipal().toString());
-        return ResponseEntity.ok().build();
+        return ResponseEntity.badRequest().build();
     }
     @PostMapping("/grade/{id}")
     public double getGrade(@PathVariable Long id)

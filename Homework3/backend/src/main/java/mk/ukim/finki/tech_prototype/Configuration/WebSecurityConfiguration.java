@@ -62,7 +62,7 @@ public class WebSecurityConfiguration{
                 .exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests().antMatchers("/api/auth/**").permitAll()
-                /*.antMatchers("/", "/csv/**", "/assets/**", "/register").permitAll()
+                .antMatchers("/", "/csv/**", "/assets/**", "/register").permitAll()
                 .antMatchers("/review/**").hasRole("USER")
                 .antMatchers("/alpinehut", "/alpinehut/{id}", "/alpinehut/name", "/alpinehut/cname", "/alpinehut/city").permitAll()
                 .antMatchers("/alpinehut/edit/**", "/alpinehut/add").hasRole("ADMIN")
@@ -76,7 +76,7 @@ public class WebSecurityConfiguration{
                 .antMatchers("/location/delete/**").hasRole("ADMIN")
                 .antMatchers("/location/grade/**").permitAll()
                 .antMatchers("/user/pending/**").hasRole("ADMIN")
-                .antMatchers("/user/addFavourite/**", "user/addVisited/**").hasRole("USER")*/
+                .antMatchers("/user/addFavourite/**", "user/addVisited/**").hasRole("USER")
                 .anyRequest().permitAll();
         http.authenticationProvider(authenticationProvider());
 
