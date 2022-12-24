@@ -58,6 +58,7 @@
       <form class="form-inline my-2 my-lg-0">
         <a class="btn btn-secondary my-2 my-sm-2 m-3" href="/register" role="button">Register</a>
         <a class="btn btn-success my-2 my-sm-2 m-3" href="/login" role="button">Log in</a>
+        <button class="btn btn-danger" data-placement="top" data-original-title="Delete" (click)="logout()">Logout</button>
       </form>
     </nav>
 
@@ -96,6 +97,7 @@
      </section>
    </div>
    <div class="text-center p-3" style="background-color: #DA291C;">
-     © 2022 Copyright:
+    <a href="/profile" class="nav-link" routerLink="profile">{{ username }}</a> 
+    © 2022 Copyright:
    </div>
  </footer>

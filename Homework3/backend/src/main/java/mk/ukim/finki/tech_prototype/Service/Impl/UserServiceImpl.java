@@ -1,6 +1,6 @@
 package mk.ukim.finki.tech_prototype.Service.Impl;
 
-import jakarta.transaction.Transactional;
+import javax.transaction.Transactional;
 import mk.ukim.finki.tech_prototype.Model.DTO.UserDTO;
 import mk.ukim.finki.tech_prototype.Model.Enumeration.Role;
 import mk.ukim.finki.tech_prototype.Model.Exception.InvalidArgumentsException;

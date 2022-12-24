@@ -5,6 +5,8 @@ import { ConfigService } from '../../config/config.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { AlpineHut } from 'src/app/alpinehut';
+import { AuthService } from '../../_services/auth.service';
+import { StorageService } from '../../_services/storage.service';
 
 @Component({
   selector: 'app-root',
@@ -24,10 +26,26 @@ export class AppComponent implements OnInit {
   public isCollapsed = true;
 
 
-  constructor(private employeeService: ConfigService){}
+  private roles: string[] = [];
+  isLoggedIn = false;
+  showAdminBoard = false;
+  showModeratorBoard = false;
+  username?: string;
 
+  constructor(private employeeService: ConfigService, private storageService: StorageService, private authService: AuthService) { }
 
   ngOnInit() {
+    this.isLoggedIn = this.storageService.isLoggedIn();
+
+    if (this.isLoggedIn) {
+      const user = this.storageService.getUser();
+      this.roles = user.roles;
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+
+      this.username = user.username;
+    }
     
 
   }
@@ -158,5 +176,19 @@ export class AppComponent implements OnInit {
   isObject(value: any): boolean { 
     debugger
     return typeof value === 'object'; }
+
+    logout(): void {
+      this.authService.logout().subscribe({
+        next: res => {
+          console.log(res);
+          this.storageService.clean();
+  
+          window.location.reload();
+        },
+        error: err => {
+          console.log(err);
+        }
+      });
+    }
 
 }

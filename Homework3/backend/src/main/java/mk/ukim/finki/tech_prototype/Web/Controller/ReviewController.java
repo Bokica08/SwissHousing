@@ -1,5 +1,5 @@
 package mk.ukim.finki.tech_prototype.Web.Controller;
-import jakarta.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletRequest;
 import mk.ukim.finki.tech_prototype.Model.DTO.ReviewDTO;
 import mk.ukim.finki.tech_prototype.Model.Review;
 import mk.ukim.finki.tech_prototype.Service.ReviewService;

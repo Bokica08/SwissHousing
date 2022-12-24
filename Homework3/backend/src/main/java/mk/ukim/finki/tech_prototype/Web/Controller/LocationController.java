@@ -3,13 +3,18 @@ package mk.ukim.finki.tech_prototype.Web.Controller;
 import mk.ukim.finki.tech_prototype.Model.Location;
 import mk.ukim.finki.tech_prototype.Service.LocationService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Optional;
 
 @RestController
 @RequestMapping("/location")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:4200", allowCredentials = "true", maxAge = 3600)
 public class LocationController {
     private final LocationService locationService;
 
@@ -22,11 +27,15 @@ public class LocationController {
         return locationService.findById(id);
     }
     @GetMapping("/delete/{id}")
-    public ResponseEntity deleteById(@PathVariable Long id)
+    public ResponseEntity deleteById(@PathVariable Long id, HttpServletRequest request)
     {
-        this.locationService.deleteById(id);
+        /*this.locationService.deleteById(id);
         if(this.locationService.findById(id).isEmpty()) return ResponseEntity.ok().build();
-        return ResponseEntity.badRequest().build();
+        return ResponseEntity.badRequest().build();*/
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        System.out.println(auth.getAuthorities());
+        System.out.println(auth.getPrincipal().toString());
+        return ResponseEntity.ok().build();
     }
     @PostMapping("/grade/{id}")
     public double getGrade(@PathVariable Long id)
