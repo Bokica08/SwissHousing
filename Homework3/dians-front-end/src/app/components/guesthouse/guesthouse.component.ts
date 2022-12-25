@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/config/config.service';
 import { GuestHouse } from 'src/app/guest-house.model';
@@ -31,7 +31,7 @@ export class GuesthouseComponent implements OnInit{
   }
 
 
-  constructor(private configService:ConfigService,private activateRoute: ActivatedRoute){
+  constructor(private configService:ConfigService,private activateRoute: ActivatedRoute,private httpClient:HttpClient){
     this.isLoggedIn=this.activateRoute.snapshot.data['data5']
     this.user=this.activateRoute.snapshot.data['data6']
     
@@ -64,8 +64,13 @@ export class GuesthouseComponent implements OnInit{
 
 
 
-  addHouse(){
-
+  getHouseForUser(id:number)
+  {
+    this.httpClient.get<any>("http://localhost:8080/user/addFavourite/"+id,).subscribe(res=>
+    {
+      console.log(res);
+      
+    })
   }
   deleteHouse(){
 

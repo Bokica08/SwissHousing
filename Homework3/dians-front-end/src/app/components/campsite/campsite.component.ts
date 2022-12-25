@@ -60,8 +60,13 @@ export class CampsiteComponent implements OnInit{
 
 
 
-  addCamp(){
-
+  getCampForUser(id:number)
+  {
+    this.httpClient.get<any>("http://localhost:8080/user/addFavourite/"+id,).subscribe(res=>
+    {
+      console.log(res);
+      
+    })
   }
   deleteCamps(){
 

@@ -58,11 +58,15 @@ export class AlpinehutComponent implements OnInit{
     debugger
   }
 
-
-
-  addHut(){
-
+  getHutForUser(id:number)
+  {
+    this.httpClient.get<any>("http://localhost:8080/user/addFavourite/"+id,).subscribe(res=>
+    {
+      console.log(res);
+      
+    })
   }
+
   deleteHut(){
 
   }

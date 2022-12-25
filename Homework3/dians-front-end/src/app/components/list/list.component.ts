@@ -1,4 +1,4 @@
-import { HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { ConfigService } from 'src/app/config/config.service';
@@ -31,7 +31,7 @@ export class ListComponent implements OnInit{
   }
 
 
-  constructor(private configService:ConfigService,private activateRoute: ActivatedRoute){
+  constructor(private configService:ConfigService,private activateRoute: ActivatedRoute,private httpClient:HttpClient){
     debugger;
     this.isLoggedIn=this.activateRoute.snapshot.data['data5']
     this.user=this.activateRoute.snapshot.data['data6']
@@ -192,5 +192,13 @@ export class ListComponent implements OnInit{
     console.log(id);
     window.location.href = "http://localhost:4200/edit-hotel/"+id;
 
+  }
+  getHotelForUser(id:number)
+  {
+    this.httpClient.get<any>("http://localhost:8080/user/addFavourite/"+id,).subscribe(res=>
+    {
+      console.log(res);
+      
+    })
   }
 }
