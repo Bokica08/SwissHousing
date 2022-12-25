@@ -69,6 +69,10 @@ public class UserServiceImpl implements UserService {
     public Optional<User> addToFavourites(String username, Long locationId) {
         User user = userRepository.findByUsername(username).orElseThrow(()->new UsernameNotFoundException(username));
         Location location = locationRepository.findById(locationId).orElseThrow(LocationNotFoundException::new);
+        if(user.getFavourites().stream().anyMatch(l->l.getLocationId().equals(locationId)))
+        {
+            return Optional.of(userRepository.save(user));
+        }
         user.getFavourites().add(location);
         return Optional.of(userRepository.save(user));
     }
@@ -78,6 +82,10 @@ public class UserServiceImpl implements UserService {
     public Optional<User> addToVisited(String username, Long locationId) {
         User user = userRepository.findByUsername(username).orElseThrow(()->new UsernameNotFoundException(username));
         Location location = locationRepository.findById(locationId).orElseThrow(LocationNotFoundException::new);
+        if(user.getVisited().stream().anyMatch(l->l.getLocationId().equals(locationId)))
+        {
+            return Optional.of(userRepository.save(user));
+        }
         user.getVisited().add(location);
         return Optional.of(userRepository.save(user));
     }
