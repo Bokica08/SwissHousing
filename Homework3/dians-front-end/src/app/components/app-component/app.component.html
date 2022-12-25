@@ -83,7 +83,7 @@
         <a class="btn btn-success my-2 my-sm-2 m-3" href="/login" role="button">Log in</a>
       </ng-container>
       <ng-container *ngIf="isLoggedIn!=false">
-        <button class="btn btn-danger" data-placement="top" data-original-title="Delete" (click)="logout()">Logout</button>
+        <a class="btn btn-danger" (click)="logout()" role="button" href="/home">Logout</a>
       </ng-container>
       </form>
     </nav>

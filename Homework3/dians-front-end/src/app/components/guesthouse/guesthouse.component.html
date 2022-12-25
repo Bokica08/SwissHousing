@@ -23,7 +23,7 @@
         <div class="container" id="main-container">
             <div class="row" style="margin-top:20px;">
                 <div *ngFor="let guesthouse of guesthouses" class="col-md-6 col-xl-3">
-                    <div class="card m-b-30" style="width: 100%; height:300px; margin-bottom:20px;">
+                    <div class="card m-b-30" style="width: 100%; height:400px; margin-bottom:20px;">
                         <div class="card-body row">
                             <div class="col-6">
                                 <a href=""><img src="{{guesthouse.imagePath}}" alt=""
@@ -48,6 +48,14 @@
                                                <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
                                                         class="fa fa-times"  (click)="test()"></i>Delete</a>-->
                                                         <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteGHouse(guesthouse.locationId)">Delete</button>
+                                                
+                                            </div>
+                                        </div>
+                                    </ng-container>
+                                    <ng-container *ngIf="isLoggedIn==true">
+                                        <div class="card-body">
+                                            <div class="float-right btn-group btn-group-sm">
+                                               
                                                         <button class="btn btn-danger tooltips" data-placement="top" data-original-title="AddToFave" (click)="getHouseForUser(guesthouse.locationId)">Add to favorites</button>
                                                         <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="AddToFave" (click)="getHouseForUserV(guesthouse.locationId)">Add to visited</button>
 
