@@ -42,7 +42,9 @@ export class ViewFavoritesComponent implements OnInit{
       debugger;
       this.userAccount=this.configService.getUser(this.username).subscribe(
         res=>{
-          console.log(res);
+          this.user=res
+          console.log(this.user);
+          
         }
       );
       debugger;
