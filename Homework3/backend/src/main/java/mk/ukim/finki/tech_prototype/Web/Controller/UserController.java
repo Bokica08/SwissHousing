@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import mk.ukim.finki.tech_prototype.Model.*;
 import mk.ukim.finki.tech_prototype.Service.UserService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.Principal;
@@ -40,7 +41,7 @@ public class UserController {
     {
         return userService.findAllPendingAdmins();
     }
-    
+    @PreAuthorize("hasRole('ROLE_ADMIN') || hasRole('ROLE_USER')")
     @GetMapping("/addFavourite/{id}")
     public ResponseEntity<User> addFavourite(@PathVariable Long id, HttpServletRequest request)
     {
@@ -48,7 +49,7 @@ public class UserController {
                 .map(user -> ResponseEntity.ok().body(user))
                 .orElseGet(()->ResponseEntity.badRequest().build());
     }
-
+    @PreAuthorize("hasRole('ROLE_ADMIN') || hasRole('ROLE_USER')")
     @GetMapping("/addVisited/{id}")
     public ResponseEntity<User> addVisited(@PathVariable Long id, HttpServletRequest request)
     {

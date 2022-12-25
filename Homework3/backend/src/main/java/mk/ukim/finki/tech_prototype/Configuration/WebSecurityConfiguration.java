@@ -76,7 +76,6 @@ public class WebSecurityConfiguration{
                 .antMatchers("/location/delete/**").hasRole("ADMIN")
                 .antMatchers("/location/grade/**").permitAll()
                 .antMatchers("/user/pending/**").hasRole("ADMIN")
-                .antMatchers("/user/addFavourite/**", "user/addVisited/**").hasRole("USER")
                 .anyRequest().permitAll();
         http.authenticationProvider(authenticationProvider());
 
