@@ -201,4 +201,12 @@ export class ListComponent implements OnInit{
       
     })
   }
+  getHotelForUserV(id:number)
+  {
+    this.httpClient.get<any>("http://localhost:8080/user/addVisited/"+id,).subscribe(res=>
+    {
+      console.log(res);
+      
+    })
+  }
 }

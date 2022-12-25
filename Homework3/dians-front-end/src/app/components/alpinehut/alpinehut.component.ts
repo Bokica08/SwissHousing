@@ -66,6 +66,14 @@ export class AlpinehutComponent implements OnInit{
       
     })
   }
+  getHutForUserV(id:number)
+  {
+    this.httpClient.get<any>("http://localhost:8080/user/addVisited/"+id,).subscribe(res=>
+    {
+      console.log(res);
+      
+    })
+  }
 
   deleteHut(){
 

@@ -96,6 +96,9 @@ const routes: Routes = [
   },
   {
     path:'favorites',component:ViewFavoritesComponent,resolve:{data5:dataResolverLoggedIn,data6:dataResolverGetAdmin}
+  },
+  {
+    path:'visited',component:ViewVisitedComponent,resolve:{data5:dataResolverLoggedIn,data6:dataResolverGetAdmin}
   }
 
 ];
