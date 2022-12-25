@@ -38,8 +38,19 @@
                View Map
             </a>
           </li>
+          <li class="nav-item">
+            <a routerLink="visited" class="nav-link">
+               View Visited
+            </a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="favorites" class="nav-link">
+               View Favorites
+            </a>
+          </li>
           <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
             <ul class="navbar-nav">
+              <ng-container *ngIf="showAdminBoard==true">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Add accommodations
@@ -51,6 +62,7 @@
                   <li><a class="dropdown-item" href="/add-camp">Add Camp Site</a></li>
                 </ul>
               </li>
+            </ng-container>
             </ul>
           </div>
         </ul>

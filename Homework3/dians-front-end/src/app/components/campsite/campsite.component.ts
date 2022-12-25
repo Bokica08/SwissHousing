@@ -2,6 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/config/config.service';
 import { CampSite } from 'src/app/camp-site.model';
+import { ActivatedRoute, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 
 @Component({
   selector: 'app-campsite',
@@ -13,6 +14,13 @@ export class CampsiteComponent implements OnInit{
   filterBy;
   dropDownResult;
   showNoResult;
+  isLoggedIn: any;
+  storageService: any;
+  roles: any;
+  showAdminBoard: any;
+  showModeratorBoard: any;
+  username: any;
+  user;
 
 
   title(title: any) {
@@ -20,9 +28,34 @@ export class CampsiteComponent implements OnInit{
   }
 
 
-  constructor(private configService:ConfigService,private httpClient:HttpClient){}
+  constructor(private configService:ConfigService,private httpClient:HttpClient,private activateRoute: ActivatedRoute){
+    this.isLoggedIn=this.activateRoute.snapshot.data['data5']
+    this.user=this.activateRoute.snapshot.data['data6']
+  }
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    throw new Error('Method not implemented.');
+  }
+
   ngOnInit(): void {
     this.getCamps();
+    if (this.isLoggedIn) {
+      console.log("if")
+      //const user = this.storageService.getUser();
+      this.roles = this.user.roles;
+      debugger
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+      debugger
+
+      this.username = this.user.username;
+    }else{
+      console.log("else")
+      console.log(this.isLoggedIn);
+    }
+    console.log(this.isLoggedIn);
+    debugger
   }
 
 

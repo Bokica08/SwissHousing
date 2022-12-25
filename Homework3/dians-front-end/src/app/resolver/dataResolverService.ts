@@ -87,3 +87,37 @@ export class dataResolverLoggedIn implements Resolve<boolean>{
 
   
 }
+@Injectable({providedIn:'root'})
+export class dataResolverGetAdmin implements Resolve<any>{
+
+    constructor(private storageService:StorageService){
+
+    }
+
+
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any | Observable<any> | Promise<any> {
+        {
+            debugger;
+            return this.storageService.getUser();
+        }
+    }
+
+  
+}
+// @Injectable({providedIn:'root'})
+// export class dataResolverGetUser implements Resolve<any>{
+
+//     constructor(private configService:ConfigService){
+
+//     }
+
+
+//     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any | Observable<any> | Promise<any> {
+//         {
+//             debugger;
+//             return this.configService.getUser(username);
+//         }
+//     }
+
+  
+// }

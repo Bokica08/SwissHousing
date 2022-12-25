@@ -41,6 +41,7 @@
                                 <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone :
                                     {{guesthouse.phoneNumber}}</li>
                                         <li class="list-group-item">
+                                            <ng-container *ngIf="isLoggedIn==true && showAdminBoard==true">
                                         <div class="card-body">
                                             <div class="float-right btn-group btn-group-sm">
                                                 <button class="btn btn-danger tooltips" data-placement="top" data-original-title="Edit" (click)="getHouse(guesthouse.locationId)">Edit</button>
@@ -49,6 +50,7 @@
                                                         <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteGHouse(guesthouse.locationId)">Delete</button>
                                             </div>
                                         </div>
+                                    </ng-container>
                                     </li>
                         </ul>
 

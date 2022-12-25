@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Employee } from '../employee';
 import { environment } from '../enviroment/enviroment';
@@ -121,5 +121,11 @@ export class ConfigService {
   public getGHouse(id:number):Observable<GuestHouse[]>{
     let queryParams=new HttpParams();
     return this.http.get<GuestHouse[]>(`${this.apiServerUrl}/guesthouse/${id}`);
+  }
+
+  public getUser(username:string):Observable<any>{
+    let queryParams=new HttpParams();
+    queryParams=queryParams.append("username",username)
+    return this.http.get<CampSite[]>(`${this.apiServerUrl}/user/get`,{params:queryParams})
   }
 }

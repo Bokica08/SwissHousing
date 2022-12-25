@@ -27,6 +27,8 @@ import { DetailsGuesthousesComponent } from './components/details-guesthouses/de
 import { DetailsCampsComponent } from './components/details-camps/details-camps.component';
 import { DetailsHotelsComponent } from './components/details-hotels/details-hotels.component';
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { ViewFavoritesComponent } from './components/view-favorites/view-favorites/view-favorites.component';
+import { ViewVisitedComponent } from './components/view-visited/view-visited/view-visited.component';
 const routes:Routes=[
 
 
@@ -54,6 +56,8 @@ const routes:Routes=[
     DetailsGuesthousesComponent,
     DetailsCampsComponent,
     DetailsHotelsComponent,
+    ViewFavoritesComponent,
+    ViewVisitedComponent,
   ],
   imports: [
     BrowserModule,
