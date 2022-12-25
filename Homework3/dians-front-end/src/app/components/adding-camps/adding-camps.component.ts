@@ -18,7 +18,7 @@ submit()
   this.httpClient.post<any>("http://localhost:8080/campsite/add",this.camp)
 .subscribe(res=>{
   console.log(this.camp);
-  window.location.href="/camps"
+  window.location.href="/campsites"
   
 })
 }
