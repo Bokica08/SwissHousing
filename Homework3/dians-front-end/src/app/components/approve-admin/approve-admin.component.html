@@ -1,0 +1,7 @@
+<div class="p-2">Username</div>
+  <ul *ngFor="let u of users" class="d-flex justify-content-center list-group cente">
+    <li class="list-group-item d-flex justify-content-between align-items-center w-25">
+        {{u.username}}
+      <button class="btn btn-primary" data-placement="top" data-original-title="Edit" (click)="approve(u.username)">Approve</button>
+    </li><br>
+  </ul>

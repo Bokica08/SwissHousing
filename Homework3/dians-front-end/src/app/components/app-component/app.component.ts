@@ -36,11 +36,9 @@ export class AppComponent implements OnInit {
   username?: string;
 
   constructor(private employeeService: ConfigService, private storageService: StorageService, private authService: AuthService,private activateRoute: ActivatedRoute,) {
-    debugger;
     //this.isLoggedIn=this.activateRoute.snapshot.data['data5']
    }
   //  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-  //   debugger;
   //   throw new Error('Method not implemented.');
   // }
 

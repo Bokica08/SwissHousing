@@ -27,6 +27,7 @@ import { DetailsGuesthousesComponent } from './components/details-guesthouses/de
 import { DetailsCampsComponent } from './components/details-camps/details-camps.component';
 import { DetailsHotelsComponent } from './components/details-hotels/details-hotels.component';
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
+import { ApproveAdminComponent } from './components/approve-admin/approve-admin.component';
 const routes:Routes=[
 
 
@@ -54,6 +55,7 @@ const routes:Routes=[
     DetailsGuesthousesComponent,
     DetailsCampsComponent,
     DetailsHotelsComponent,
+    ApproveAdminComponent,
   ],
   imports: [
     BrowserModule,

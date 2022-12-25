@@ -21,6 +21,7 @@ import { DetailsAlpinehutComponent } from './components/details-alpinehut/detail
 import { DetailsGuesthousesComponent } from './components/details-guesthouses/details-guesthouses.component';
 import { DetailsCampsComponent } from './components/details-camps/details-camps.component';
 import { DetailsHotelsComponent } from './components/details-hotels/details-hotels.component';
+import { ApproveAdminComponent } from './components/approve-admin/approve-admin.component';
 
 const routes: Routes = [
   {
@@ -83,6 +84,9 @@ const routes: Routes = [
   },
   {
     path:'hotel-details/:id',component:DetailsHotelsComponent
+  },
+  {
+    path:'approve',component:ApproveAdminComponent
   }
 
 ];

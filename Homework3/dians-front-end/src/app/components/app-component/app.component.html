@@ -38,12 +38,16 @@
                View Map
             </a>
           </li>
-          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+
+          <div *ngIf="showAdminBoard==true" class="collapse navbar-collapse" id="navbarNavDarkDropdown">
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
                   Add accommodations
+         
                 </a>
+
                 <ul class="dropdown-menu dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink" id="navv">
                   <li><a class="dropdown-item" href="/add-hotel">Add Hotel</a></li>
                   <li><a class="dropdown-item" href="/add-hut">Add Alpine Hut</a></li>
@@ -53,6 +57,13 @@
               </li>
             </ul>
           </div>
+
+          <li class="nav-item">
+            <a *ngIf="showAdminBoard==true" routerLink="approve" class="nav-link">
+               Approve Admins
+            </a>
+          </li>
+
         </ul>
       </div>
       <form class="form-inline my-2 my-lg-0">
