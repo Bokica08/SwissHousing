@@ -18,6 +18,7 @@ submit()
   this.httpClient.post<any>("http://localhost:8080/hotel/add",this.hotel)
 .subscribe(res=>{
   console.log(this.hotel);
+  window.location.href="/hotels"
   
 })
 }

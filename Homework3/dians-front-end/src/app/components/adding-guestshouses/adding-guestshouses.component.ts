@@ -18,6 +18,7 @@ export class AddingGuestshousesComponent implements OnInit{
     this.httpClient.post<any>("http://localhost:8080/guesthouse/add",this.guest)
   .subscribe(res=>{
     console.log(this.guest);
+    window.location.href="/guesthouses"
     
   })
   }

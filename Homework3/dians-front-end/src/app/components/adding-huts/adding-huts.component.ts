@@ -18,7 +18,7 @@ submit()
   this.httpClient.post<any>("http://localhost:8080/alpinehut/add",this.hut)
 .subscribe(res=>{
   console.log(this.hut);
-  
+  window.location.href="/huts"
 })
 }
 }
