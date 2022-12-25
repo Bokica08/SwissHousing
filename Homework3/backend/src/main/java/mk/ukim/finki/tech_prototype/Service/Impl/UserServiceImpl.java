@@ -87,5 +87,10 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAllByRole(Role.ROLE_PENDING_ADMIN);
     }
 
+    @Override
+    public Optional<User> getUser(String username){
+        User user = userRepository.findByUsername(username).orElseThrow(()->new UsernameNotFoundException(username));
+        return Optional.of(user);
+    }
 
 }

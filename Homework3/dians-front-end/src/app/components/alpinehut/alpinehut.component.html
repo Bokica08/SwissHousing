@@ -42,15 +42,19 @@
     
                         </ul>
                         <li class="list-group-item" style="margin: -1px;">
+                            <ng-container *ngIf="isLoggedIn==true && showAdminBoard==true">
                         <div class="card-body">
                             <div class="float-right btn-group btn-group-sm">
+                                
                                 <button class="btn btn-danger tooltips" data-placement="top" data-original-title="Edit" (click)="getHut(alpinehut.locationId)">Edit</button>
 
                                <!-- <a role="button" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i
                                         class="fa fa-times"  (click)="test()"></i>Delete</a>-->
                                         <button class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete" (click)="deleteH(alpinehut.locationId)">Delete</button>
-                            </div>
+                                    
+                                    </div>
                         </div>
+                    </ng-container>
                         </li>
                     </div>
                 </div>

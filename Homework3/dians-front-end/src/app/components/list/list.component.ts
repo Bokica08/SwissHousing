@@ -18,6 +18,7 @@ export class ListComponent implements OnInit{
   isLoggedIn: any;
   storageService: any;
   roles: any;
+  user;
   showAdminBoard: any;
   showModeratorBoard: any;
   username: any;
@@ -33,6 +34,7 @@ export class ListComponent implements OnInit{
   constructor(private configService:ConfigService,private activateRoute: ActivatedRoute){
     debugger;
     this.isLoggedIn=this.activateRoute.snapshot.data['data5']
+    this.user=this.activateRoute.snapshot.data['data6']
     //this.isLoggedIn = this.storageService.isLoggedIn();
   }
 
@@ -47,15 +49,15 @@ export class ListComponent implements OnInit{
     //this.isLoggedIn=this.activateRoute.snapshot.data['data5']
     if (this.isLoggedIn) {
       console.log("if")
-      const user = this.storageService.getUser();
-      this.roles = user.roles;
+      //const user = this.storageService.getUser();
+      this.roles = this.user.roles;
       debugger
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
       debugger
 
-      this.username = user.username;
+      this.username = this.user.username;
     }else{
       console.log("else")
       console.log(this.isLoggedIn);

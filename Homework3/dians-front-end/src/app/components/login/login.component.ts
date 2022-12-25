@@ -39,6 +39,7 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.storageService.getUser().roles;
+        //window.location.reload()
         window.location.href="/home"
       },
       error: err => {

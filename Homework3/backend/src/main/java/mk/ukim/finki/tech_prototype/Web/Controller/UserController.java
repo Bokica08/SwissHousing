@@ -57,4 +57,11 @@ public class UserController {
                 .orElseGet(()->ResponseEntity.badRequest().build());
     }
 
+    @GetMapping("/get")
+    public ResponseEntity<User> getUserByUsername(@RequestParam String username){
+        return this.userService.getUser(username)
+                .map(user -> ResponseEntity.ok().body(user))
+                .orElseGet(()->ResponseEntity.badRequest().build());
+    }
+
 }

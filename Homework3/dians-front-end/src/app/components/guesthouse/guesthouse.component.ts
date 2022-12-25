@@ -2,7 +2,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ConfigService } from 'src/app/config/config.service';
 import { GuestHouse } from 'src/app/guest-house.model';
-import { Router} from "@angular/router";
+import { ActivatedRoute, ActivatedRouteSnapshot, Router, RouterStateSnapshot} from "@angular/router";
 import { state } from '@angular/animations';
 
 @Component({
@@ -17,6 +17,13 @@ export class GuesthouseComponent implements OnInit{
   dropDownResult;
   showNoResult;
   router: any;
+  isLoggedIn: any;
+  storageService: any;
+  roles: any;
+  showAdminBoard: any;
+  showModeratorBoard: any;
+  username: any;
+  user;
 
 
   title(title: any) {
@@ -24,9 +31,34 @@ export class GuesthouseComponent implements OnInit{
   }
 
 
-  constructor(private configService:ConfigService){}
+  constructor(private configService:ConfigService,private activateRoute: ActivatedRoute){
+    this.isLoggedIn=this.activateRoute.snapshot.data['data5']
+    this.user=this.activateRoute.snapshot.data['data6']
+    
+  }
+
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    throw new Error('Method not implemented.');
+  }
   ngOnInit(): void {
     this.getHouses();
+    if (this.isLoggedIn) {
+      console.log("if")
+      //const user = this.storageService.getUser();
+      this.roles = this.user.roles;
+      debugger
+
+      this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
+      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+      debugger
+
+      this.username = this.user.username;
+    }else{
+      console.log("else")
+      console.log(this.isLoggedIn);
+    }
+    console.log(this.isLoggedIn);
+    debugger
     
   }
 

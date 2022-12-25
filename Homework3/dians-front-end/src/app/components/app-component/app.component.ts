@@ -25,6 +25,7 @@ export class AppComponent implements OnInit {
   public editHut!: AlpineHut;
   public deleteHut!: AlpineHut;
   public isCollapsed = true;
+  user;
 
 
 
@@ -35,16 +36,25 @@ export class AppComponent implements OnInit {
   showModeratorBoard = false;
   username?: string;
 
-  constructor(private employeeService: ConfigService, private storageService: StorageService, private authService: AuthService,private activateRoute: ActivatedRoute,) {
+  constructor(private employeeService: ConfigService, 
+    private storageService: StorageService, 
+    private authService: AuthService,
+    private activateRoute: ActivatedRoute,) {
+    debugger;
     //this.isLoggedIn=this.activateRoute.snapshot.data['data5']
+    this.user=this.activateRoute.snapshot.data['data6']
    }
+   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
+    throw new Error('Method not implemented.');
+  }
   //  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
   //   throw new Error('Method not implemented.');
   // }
 
   ngOnInit() {
     // if(this.isLoggedIn==undefined || this.isLoggedIn==null){
-    //   if (this.isLoggedIn) {
+       //if (this.isLoggedIn) {
+        
     //     const user = this.storageService.getUser();
     //     this.roles = user.roles;
   
@@ -55,20 +65,38 @@ export class AppComponent implements OnInit {
     //   }
     // }else{
       this.isLoggedIn=this.storageService.isLoggedIn();
-      const user = this.storageService.getUser();
-        this.roles = user.roles;
-  
+      //const user = this.storageService.getUser();
+      console.log("before roles")
+      debugger
+        
+    console.log("after roles")
+    debugger
+    if(this.user!=undefined && this.user!=null && Object.keys(this.user).length>1){
+      this.roles = this.user.roles;
+      console.log("logged in 1")
+      console.log(this.user)
         this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
         this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
   
-        this.username = user.username;
-    //}
+        this.username = this.user.username;
+        console.log("logged in")
+    }else{
+      this.showAdminBoard=false;
+      this.showModeratorBoard=false;
+      console.log("not logged in")
+    }
+        console.log(this.showAdminBoard);
+        
+    // }else{
+    //   console.log("U else")
+    // }
     //this.isLoggedIn = this.storageService.isLoggedIn();
 
     
     
 
   }
+  
 
   public getEmployees(): void {
     debugger

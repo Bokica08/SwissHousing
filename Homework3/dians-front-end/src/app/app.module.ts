@@ -28,6 +28,8 @@ import { DetailsCampsComponent } from './components/details-camps/details-camps.
 import { DetailsHotelsComponent } from './components/details-hotels/details-hotels.component';
 import { httpInterceptorProviders } from './_helpers/http.interceptor';
 import { ApproveAdminComponent } from './components/approve-admin/approve-admin.component';
+import { ViewFavoritesComponent } from './components/view-favorites/view-favorites/view-favorites.component';
+import { ViewVisitedComponent } from './components/view-visited/view-visited/view-visited.component';
 const routes:Routes=[
 
 
@@ -56,6 +58,8 @@ const routes:Routes=[
     DetailsCampsComponent,
     DetailsHotelsComponent,
     ApproveAdminComponent,
+    ViewFavoritesComponent,
+    ViewVisitedComponent,
   ],
   imports: [
     BrowserModule,
