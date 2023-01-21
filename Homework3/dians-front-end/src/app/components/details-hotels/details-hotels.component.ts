@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ConfigService } from 'src/app/config/config.service';
 import { Hotel } from '../adding-hotels/adding-hotels.model';
+import { ListReview } from 'src/app/list-reviews.model';
+
 
 @Component({
   selector: 'app-details-hotels',
@@ -10,6 +12,7 @@ import { Hotel } from '../adding-hotels/adding-hotels.model';
   styleUrls: ['./details-hotels.component.css']
 })
 export class DetailsHotelsComponent implements OnInit{
+  public reviews:ListReview[] | undefined;
   hotel=new Hotel();
   id:string
   constructor(private httpClient:HttpClient,private route: ActivatedRoute,private configService:ConfigService){}
@@ -28,5 +31,27 @@ export class DetailsHotelsComponent implements OnInit{
       
       
     );
-      }
+    this.getReviews();
+  }
+
+    addReview(id:string)
+    {
+      console.log(id);
+      window.location.href = "http://localhost:4200/review/add/"+id+"?type=hotel-details";
+    }
+
+    public getReviews(): void {
+  
+      this.configService.getReviewsByLocation((Number)(this.id)).subscribe(
+        
+        (response: ListReview[]) => {
+          this.reviews = response;
+          console.log(this.reviews);
+        },
+        (error: HttpErrorResponse) => {
+          alert(error.message);
+        }
+        
+      );
+    }
 }

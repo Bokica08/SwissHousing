@@ -1,5 +1,7 @@
 package mk.ukim.finki.tech_prototype.Web.Controller;
 import javax.servlet.http.HttpServletRequest;
+
+import mk.ukim.finki.tech_prototype.Model.DTO.ListReviewsDTO;
 import mk.ukim.finki.tech_prototype.Model.DTO.ReviewDTO;
 import mk.ukim.finki.tech_prototype.Model.Review;
 import mk.ukim.finki.tech_prototype.Service.ReviewService;

@@ -32,14 +32,14 @@ export class ViewFavoritesComponent implements OnInit{
       console.log("if")
       //const user = this.storageService.getUser();
       this.roles = this.user.roles;
-      debugger
+      //debugger
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-      debugger
+      //debugger
 
       this.username = this.user.username;
-      debugger;
+      //debugger;
       this.userAccount=this.configService.getUser(this.username).subscribe(
         res=>{
           this.user=res
@@ -47,14 +47,14 @@ export class ViewFavoritesComponent implements OnInit{
           
         }
       );
-      debugger;
+      //debugger;
       console.log(this.userAccount.lastname);
     }else{
       console.log("else")
       console.log(this.isLoggedIn);
     }
     console.log(this.isLoggedIn);
-    debugger
+    //debugger
   }
 
 }

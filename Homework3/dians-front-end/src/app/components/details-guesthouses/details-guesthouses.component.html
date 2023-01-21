@@ -18,6 +18,13 @@
 
             <div class="project-info-box mt-0 mb-0">
                 <p class="mb-0">
+                    <button class="btn btn-danger tooltips" data-placement="top" data-original-title="Add review" (click)="addReview(id)">Add review</button>
+
+                </p>
+            </div>
+
+            <div class="project-info-box mt-0 mb-0">
+                <p class="mb-0">
                     <a class="btn btn-danger" href="http://localhost:4200/guesthouses" role="button">&laquo; Back</a>
                 </p>
             </div><!-- / project-info-box -->
@@ -36,5 +43,18 @@
                   </div>
             </div><!-- / project-info-box -->
         </div><!-- / column -->
+    </div>
+    <div class="row">
+        <h3 class="mb-5">Reviews</h3>
+        <div class="col-md-12">
+            <div class="card mb-3" *ngFor="let r of reviews">
+                <h5 class="card-header">Added by: {{r.reviewer.username}}, Grade: {{r.grade}}/5</h5>
+                <div class="card-body">
+                  <p class="card-text">{{r.text}}</p>
+                  <hr>
+                  <p class="card-text">Added: {{r.timeCrated}}</p>
+                </div>
+              </div>
+        </div>
     </div>
 </div>

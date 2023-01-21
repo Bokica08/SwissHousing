@@ -4,6 +4,8 @@ import { ActivatedRoute } from '@angular/router';
 import { ConfigService } from 'src/app/config/config.service';
 import { Camp } from '../adding-camps/adding-camps.model';
 import { Hut } from '../adding-huts/adding-huts.model';
+import { ListReview } from 'src/app/list-reviews.model';
+
 
 @Component({
   selector: 'app-details-camps',
@@ -12,6 +14,7 @@ import { Hut } from '../adding-huts/adding-huts.model';
 })
 export class DetailsCampsComponent implements OnInit{
   camp=new Camp();
+  public reviews:ListReview[] | undefined;
   id:string
   constructor(private httpClient:HttpClient,private route: ActivatedRoute,private configService:ConfigService){}
   ngOnInit(): void {
@@ -29,6 +32,28 @@ export class DetailsCampsComponent implements OnInit{
       
       
     );
+    this.getReviews();
       }
+    
+    addReview(id:string)
+    {
+      console.log(id);
+      window.location.href = "http://localhost:4200/review/add/"+id+"?type=camp-details";
+    }
+
+    public getReviews(): void {
+  
+      this.configService.getReviewsByLocation((Number)(this.id)).subscribe(
+        
+        (response: ListReview[]) => {
+          this.reviews = response;
+          console.log(this.reviews);
+        },
+        (error: HttpErrorResponse) => {
+          alert(error.message);
+        }
+        
+      );
+    }
 
 }

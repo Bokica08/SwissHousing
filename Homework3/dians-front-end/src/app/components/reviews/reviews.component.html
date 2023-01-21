@@ -1,0 +1,29 @@
+<h2 class="text-center mt-3">Add a review</h2>
+<hr />
+
+<form #f="ngForm"(ngSubmit)="submit()" style="margin-bottom: 13em;">
+    <div class="mt-4">
+        <div class="row mb-3 w-80">
+            <div class="col-md-3"></div>
+            <label class="form-label col-md-1 font-weight-bold text-right" for="text">Review</label><br>
+            <div class="col-md-4">
+                <textarea required #text="ngModel" id="text" class="form-control" name="text" [(ngModel)]="review.text"></textarea>
+            </div>
+        </div>
+        <div class="row mb-3 w-80">
+            <div class="col-md-3"></div>
+            <label class="form-label col-md-1 font-weight-bold text-right" for="grade">Grade</label><br>
+            <div class="col-md-4">
+                <input required #grade="ngModel" type="number" id="grade" class="form-control" name="grade" [(ngModel)]="review.grade" />
+            </div>
+        </div>
+        <div class="row mt-4 w-80">
+            <div class="col-md-3">
+            </div>
+            <div class="col-md-6">
+                <input type="submit" value="Create" class="btn btn-default w-100" />
+            </div>
+        </div>
+    </div>
+</form>
+<div class="row" style="margin-bottom: 4em;"><div class="col-md-12"></div></div>

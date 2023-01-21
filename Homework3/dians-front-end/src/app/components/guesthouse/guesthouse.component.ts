@@ -46,11 +46,11 @@ export class GuesthouseComponent implements OnInit{
       console.log("if")
       //const user = this.storageService.getUser();
       this.roles = this.user.roles;
-      debugger
+      //debugger
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-      debugger
+      //debugger
 
       this.username = this.user.username;
     }else{
@@ -58,7 +58,7 @@ export class GuesthouseComponent implements OnInit{
       console.log(this.isLoggedIn);
     }
     console.log(this.isLoggedIn);
-    debugger
+    //debugger
     
   }
 

@@ -30,6 +30,7 @@ import { httpInterceptorProviders } from './_helpers/http.interceptor';
 import { ApproveAdminComponent } from './components/approve-admin/approve-admin.component';
 import { ViewFavoritesComponent } from './components/view-favorites/view-favorites/view-favorites.component';
 import { ViewVisitedComponent } from './components/view-visited/view-visited/view-visited.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 const routes:Routes=[
 
 
@@ -60,6 +61,7 @@ const routes:Routes=[
     ApproveAdminComponent,
     ViewFavoritesComponent,
     ViewVisitedComponent,
+    ReviewsComponent,
   ],
   imports: [
     BrowserModule,

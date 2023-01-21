@@ -32,7 +32,7 @@ export class ListComponent implements OnInit{
 
 
   constructor(private configService:ConfigService,private activateRoute: ActivatedRoute,private httpClient:HttpClient){
-    debugger;
+    //debugger;
     this.isLoggedIn=this.activateRoute.snapshot.data['data5']
     this.user=this.activateRoute.snapshot.data['data6']
     //this.isLoggedIn = this.storageService.isLoggedIn();
@@ -43,7 +43,7 @@ export class ListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    debugger;
+    //debugger;
     this.getEmployees();
     
     //this.isLoggedIn=this.activateRoute.snapshot.data['data5']
@@ -51,11 +51,11 @@ export class ListComponent implements OnInit{
       console.log("if")
       //const user = this.storageService.getUser();
       this.roles = this.user.roles;
-      debugger
+      //debugger
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-      debugger
+      //debugger
 
       this.username = this.user.username;
     }else{
@@ -63,7 +63,7 @@ export class ListComponent implements OnInit{
       console.log(this.isLoggedIn);
     }
     console.log(this.isLoggedIn);
-    debugger
+    //debugger
   }
 
 

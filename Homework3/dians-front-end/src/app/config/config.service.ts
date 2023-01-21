@@ -6,6 +6,7 @@ import { environment } from '../enviroment/enviroment';
 import { AlpineHut } from '../alpinehut';
 import { GuestHouse } from '../guest-house.model';
 import { CampSite } from '../camp-site.model';
+import { ListReview } from '../list-reviews.model';
 
 @Injectable({providedIn: 'root'})
 export class ConfigService {
@@ -127,5 +128,11 @@ export class ConfigService {
     let queryParams=new HttpParams();
     queryParams=queryParams.append("username",username)
     return this.http.get<CampSite[]>(`${this.apiServerUrl}/user/get`,{params:queryParams})
+  }
+
+  public getReviewsByLocation(locationId:number):Observable<ListReview[]>{
+    let queryParams=new HttpParams();
+    queryParams=queryParams.append("locationId",locationId)
+    return this.http.get<ListReview[]>(`${this.apiServerUrl}/review/location`,{params:queryParams});
   }
 }

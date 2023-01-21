@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit{
   username: any;
 
   constructor(private activateRoute: ActivatedRoute,){
-    debugger;
+    //debugger;
     this.isLoggedIn=this.activateRoute.snapshot.data['data5']
     
   }
@@ -26,11 +26,11 @@ export class HomeComponent implements OnInit{
 
    ngOnInit(): void {
 
-    debugger
+    //debugger
     //this.isLoggedIn = this.storageService.isLoggedIn();
 
     if (this.isLoggedIn) {
-      debugger
+      //debugger
       const user = this.storageService.getUser();
       this.roles = user.roles;
 
@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit{
 
       this.username = user.username;
     }
-    debugger
+    //debugger
   }
 
 }

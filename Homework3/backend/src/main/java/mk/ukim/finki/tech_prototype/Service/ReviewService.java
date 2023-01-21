@@ -1,5 +1,6 @@
 package mk.ukim.finki.tech_prototype.Service;
 
+import mk.ukim.finki.tech_prototype.Model.DTO.ListReviewsDTO;
 import mk.ukim.finki.tech_prototype.Model.DTO.ReviewDTO;
 import mk.ukim.finki.tech_prototype.Model.Review;
 import java.util.*;

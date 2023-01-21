@@ -1,5 +1,6 @@
 package mk.ukim.finki.tech_prototype.Service.Impl;
 
+import mk.ukim.finki.tech_prototype.Model.DTO.ListReviewsDTO;
 import mk.ukim.finki.tech_prototype.Model.DTO.ReviewDTO;
 import mk.ukim.finki.tech_prototype.Model.Exception.InvalidArgumentsException;
 import mk.ukim.finki.tech_prototype.Model.Location;
@@ -10,6 +11,7 @@ import mk.ukim.finki.tech_prototype.Repository.ReviewRepository;
 import mk.ukim.finki.tech_prototype.Repository.UserRepository;
 import mk.ukim.finki.tech_prototype.Service.ReviewService;
 import java.util.*;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -34,7 +36,7 @@ public class ReviewServiceImp implements ReviewService {
 
     @Override
     public Optional<Review> post(ReviewDTO reviewDto, String username) {
-        Location location = locationRepository.findById(reviewDto.getLocation().getLocationId()).orElseThrow(InvalidArgumentsException::new);
+        Location location = locationRepository.findById(reviewDto.getLocationId()).orElseThrow(InvalidArgumentsException::new);
         User user = userRepository.findByUsername(username).orElseThrow(InvalidArgumentsException::new);
         return Optional.of(reviewRepository.save(new Review(reviewDto.getText(), user, location, reviewDto.getGrade())));
     }
@@ -73,7 +75,7 @@ public class ReviewServiceImp implements ReviewService {
         review.setText(reviewDTO.getText());
         User user = userRepository.findByUsername(username).orElseThrow(InvalidArgumentsException::new);
         review.setReviewer(user);
-        Location location = locationRepository.findById(reviewDTO.getLocation().getLocationId()).orElseThrow(InvalidArgumentsException::new);
+        Location location = locationRepository.findById(reviewDTO.getLocationId()).orElseThrow(InvalidArgumentsException::new);
         review.setLocation(location);
         review.setGrade(review.getGrade());
         return Optional.of(reviewRepository.save(review));

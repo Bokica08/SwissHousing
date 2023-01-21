@@ -25,6 +25,7 @@ import { ApproveAdminComponent } from './components/approve-admin/approve-admin.
 import { AppComponent } from './components/app-component/app.component';
 import { ViewVisitedComponent } from './components/view-visited/view-visited/view-visited.component';
 import { ViewFavoritesComponent } from './components/view-favorites/view-favorites/view-favorites.component';
+import { ReviewsComponent } from './components/reviews/reviews.component';
 
 const routes: Routes = [
  
@@ -99,6 +100,9 @@ const routes: Routes = [
   },
   {
     path:'visited',component:ViewVisitedComponent,resolve:{data5:dataResolverLoggedIn,data6:dataResolverGetAdmin}
+  },
+  {
+    path:'review/add/:id', component:ReviewsComponent
   }
 
 ];

@@ -80,7 +80,7 @@ export class dataResolverLoggedIn implements Resolve<boolean>{
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | Observable<boolean> | Promise<boolean> {
         {
-            debugger;
+            //debugger;
             return this.storageService.isLoggedIn();
         }
     }
@@ -97,7 +97,7 @@ export class dataResolverGetAdmin implements Resolve<any>{
 
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): any | Observable<any> | Promise<any> {
         {
-            debugger;
+            //debugger;
             return this.storageService.getUser();
         }
     }

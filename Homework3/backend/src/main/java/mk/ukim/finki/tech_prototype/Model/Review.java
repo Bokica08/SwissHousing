@@ -32,6 +32,7 @@ public class Review {
         this.reviewer=reviewer;
         this.timeCrated=LocalDateTime.now();
         this.location=location;
+        this.grade=grade;
     }
 
 }
