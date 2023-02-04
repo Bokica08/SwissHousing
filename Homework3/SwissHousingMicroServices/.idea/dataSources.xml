@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/swisshousing-users-ms</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="location-ms" uuid="c6236f8e-68f4-40b6-861d-cdc676bebb86">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/swisshousing-location-ms</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

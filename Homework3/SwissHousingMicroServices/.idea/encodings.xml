@@ -5,6 +5,9 @@
     <file url="file://$PROJECT_DIR$/Eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/EurekaServer/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/EurekaServer/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LocationsService/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LocationsService/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/LocationsService/src/main/resources/templates" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/UsersService/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/UsersService/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />

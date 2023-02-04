@@ -12,6 +12,7 @@
   <modules>
     <module>EurekaServer</module>
     <module>UsersService</module>
+    <module>LocationsService</module>
   </modules>
 
   <properties>
