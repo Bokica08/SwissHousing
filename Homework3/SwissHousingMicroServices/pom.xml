@@ -11,6 +11,7 @@
   <url>https://www.swisshousing.com</url>
   <modules>
     <module>EurekaServer</module>
+    <module>UsersService</module>
   </modules>
 
   <properties>
