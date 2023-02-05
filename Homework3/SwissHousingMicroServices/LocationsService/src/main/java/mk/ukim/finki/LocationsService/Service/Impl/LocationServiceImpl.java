@@ -11,13 +11,11 @@ import java.util.Optional;
 @Service
 public class LocationServiceImpl implements LocationService {
     private final LocationRepository locationRepository;
-    //private final ReviewRepository reviewRepository;
     private final UsersServiceLocationClient locationClient;
 
 
     public LocationServiceImpl(LocationRepository locationRepository, UsersServiceLocationClient locationClient) {
         this.locationRepository = locationRepository;
-        //this.reviewRepository = reviewRepository;
         this.locationClient = locationClient;
     }
 
@@ -29,10 +27,6 @@ public class LocationServiceImpl implements LocationService {
 
     public double getGradeForLocation(Long id)
     {
-        /** todo:feign client
-         * if(reviewRepository.findReviewsByLocation_LocationId(id).size()==0)
-            return 0;
-        return reviewRepository.findReviewsByLocation_LocationId(id).stream().mapToDouble(Review::getGrade).average().orElse(0);**/
         return locationClient.getGrade(id);
     }
 

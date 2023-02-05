@@ -9,9 +9,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class AppUserApplication {
+public class AppUsersApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AppUserApplication.class,args);
+        SpringApplication.run(AppUsersApplication.class,args);
     }
     @Bean
     public PasswordEncoder passwordEncoder() {
