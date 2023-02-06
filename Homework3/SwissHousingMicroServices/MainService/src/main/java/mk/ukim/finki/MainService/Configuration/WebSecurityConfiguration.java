@@ -63,7 +63,7 @@ public class WebSecurityConfiguration{
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests().antMatchers("/api/auth/**").permitAll()
                 .antMatchers("/", "/csv/**", "/assets/**", "/register").permitAll()
-                .antMatchers("/review/**").hasRole("USER") //todo: user required for creating a review, everything else is available for all users
+                .antMatchers("/review/edit/**", "/review/add", "/review/delete/**").hasRole("USER")
                 .antMatchers("/alpinehut", "/alpinehut/{id}", "/alpinehut/name", "/alpinehut/cname", "/alpinehut/city").permitAll()
                 .antMatchers("/alpinehut/edit/**", "/alpinehut/add").hasRole("ADMIN")
                 .antMatchers("/campsite", "/campsite/{id}", "/campsite/name", "/campsite/cname", "/campsite/city").permitAll()

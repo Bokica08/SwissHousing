@@ -28,7 +28,7 @@ public class LocationController {
     {
         return locationClient.deleteById(id);
     }
-    @PostMapping("/grade/{id}")
+    @GetMapping("/grade/{id}")
     public double getGrade(@PathVariable Long id)
     {
         return locationClient.getGrade(id);

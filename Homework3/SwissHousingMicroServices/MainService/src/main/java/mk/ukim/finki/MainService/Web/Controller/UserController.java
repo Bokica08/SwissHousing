@@ -2,6 +2,7 @@ package mk.ukim.finki.MainService.Web.Controller;
 
 import mk.ukim.finki.MainService.FeignClient.UsersServiceUsersClient;
 import mk.ukim.finki.MainService.Model.*;
+import mk.ukim.finki.MainService.Service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -17,9 +18,11 @@ import java.util.List;
 public class UserController {
 
     private final UsersServiceUsersClient usersClient;
+    private final UserService userService;
 
-    public UserController(UsersServiceUsersClient usersClient) {
+    public UserController(UsersServiceUsersClient usersClient, UserService userService) {
         this.usersClient = usersClient;
+        this.userService = userService;
     }
 
     @GetMapping
@@ -55,7 +58,9 @@ public class UserController {
 
     @GetMapping("/get")
     public ResponseEntity<User> getUserByUsername(@RequestParam String username){
-        return usersClient.getUserByUsername(username);
+        return userService.getUser(username)
+                .map(user -> ResponseEntity.ok().body(user))
+                .orElseGet(()->ResponseEntity.badRequest().build());
     }
 
 }

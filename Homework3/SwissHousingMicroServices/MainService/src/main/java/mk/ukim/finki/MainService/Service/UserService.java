@@ -10,4 +10,5 @@ import java.util.Optional;
 public interface UserService extends UserDetailsService {
 
     Optional<User> register(UserDTO userDTO);
+    Optional<User> getUser(String username);
 }

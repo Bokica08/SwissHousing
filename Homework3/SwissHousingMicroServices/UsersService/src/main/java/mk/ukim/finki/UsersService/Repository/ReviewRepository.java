@@ -1,6 +1,7 @@
 package mk.ukim.finki.UsersService.Repository;
 
 
+import mk.ukim.finki.UsersService.Model.Location;
 import mk.ukim.finki.UsersService.Model.Review;
 import mk.ukim.finki.UsersService.Model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,4 +13,5 @@ import java.util.List;
 public interface ReviewRepository extends JpaRepository<Review, Long> {
     List<Review> findReviewsByLocation_LocationId(Long id);
     List<Review> findAllByReviewer(User reviewer);
+    void deleteAllByLocationLocationId(Long locationId);
 }
