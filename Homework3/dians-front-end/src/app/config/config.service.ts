@@ -37,28 +37,12 @@ export class ConfigService {
   public addEmployee(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>(`${this.apiServerUrl}/hotel/add`, employee);
   }
-  public addHut(hut: AlpineHut): Observable<AlpineHut> {
-    return this.http.post<AlpineHut>(`${this.apiServerUrl}/alpinehut/add`, hut);
-  }
-  public addHouse(house: GuestHouse): Observable<GuestHouse> {
-    return this.http.post<GuestHouse>(`${this.apiServerUrl}/guesthouse/add`, house);
-  }
-  public addCamp(camp: CampSite): Observable<CampSite> {
-    return this.http.post<CampSite>(`${this.apiServerUrl}/campsite/add`, camp);
-  }
+
 
   public updateEmployee(employeeId: number): Observable<Employee> {
     return this.http.delete<Employee>(`${this.apiServerUrl}/hotel/edit/${employeeId}`);
   }
-  public updateHut(hutid: number): Observable<AlpineHut> {
-    return this.http.delete<AlpineHut>(`${this.apiServerUrl}/alpinehut/edit/${hutid}`);
-  }
-  public updateHouse(houseid: number): Observable<GuestHouse> {
-    return this.http.delete<GuestHouse>(`${this.apiServerUrl}/guesthouse/edit/${houseid}`);
-  }
-  public updateCamp(campid: number): Observable<CampSite> {
-    return this.http.delete<CampSite>(`${this.apiServerUrl}/campsite/edit/${campid}`);
-  }
+
 
   public deleteEmployee(employeeId: number): Observable<void> {
     return this.http.get<void>(`${this.apiServerUrl}/location/delete/${employeeId}`);

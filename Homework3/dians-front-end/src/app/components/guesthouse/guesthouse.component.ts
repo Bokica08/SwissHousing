@@ -43,22 +43,20 @@ export class GuesthouseComponent implements OnInit{
   ngOnInit(): void {
     this.getHouses();
     if (this.isLoggedIn) {
-      console.log("if")
       //const user = this.storageService.getUser();
       this.roles = this.user.roles;
-      //debugger
+      
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-      //debugger
+      
 
       this.username = this.user.username;
     }else{
-      console.log("else")
       console.log(this.isLoggedIn);
     }
     console.log(this.isLoggedIn);
-    //debugger
+    
     
   }
 
@@ -98,12 +96,10 @@ export class GuesthouseComponent implements OnInit{
     );
   }
   filter(){
-    console.log("hey")
     console.log(this.filterBy!=null)
     console.log(this.dropDownResult);
     // ako e 
     if(this.filterBy==null || this.filterBy.length==0){
-      console.log("Prv if")
       this.configService.getHouses().subscribe(
       
         (response: GuestHouse[]) => {
@@ -122,7 +118,6 @@ export class GuesthouseComponent implements OnInit{
       }
       // ako e selektirano da bara po city
     }else if(this.dropDownResult==='city'){
-      console.log("Vtor if")
     this.configService.getByCityHouse(this.filterBy).subscribe(
       (response: GuestHouse[]) => {
         this.guesthouses = response;
@@ -135,7 +130,6 @@ export class GuesthouseComponent implements OnInit{
     this.showNoResult=false;
     // ako e selektirano da bara po ime
     }else if(this.dropDownResult==='name'){
-      console.log("Tret elif")
       this.configService.getByNameHouse(this.filterBy).subscribe(
         (response:GuestHouse[])=>{
           this.guesthouses=response;
@@ -147,7 +141,6 @@ export class GuesthouseComponent implements OnInit{
       
     //ako nema selektirano bara default po ime
     }else{
-      console.log("pet elif")
 
       this.configService.getByNameHouse(this.filterBy).subscribe(
         (response:GuestHouse[])=>{

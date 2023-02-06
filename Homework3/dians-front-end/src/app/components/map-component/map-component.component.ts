@@ -103,9 +103,6 @@ export class MapComponentComponent implements OnInit,Resolve<any>{
       btn.style.color='black'
 
     }
-
-
-
     this.showMap()
     
   }

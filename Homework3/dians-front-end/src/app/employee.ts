@@ -13,19 +13,5 @@ export interface Employee {
     website: string | null;
     phoneNumber: string | null;
     stars: number | null;
-    /**
-     * private Double x;
-    private Double y;
-    private String name;
-    private String city;
-    private String street;
-    private String houseNumber;
-    private String description;
-    private String imagePath;
-    private String website;
-    private String phoneNumber;
-    private int stars;
-     */
 
-    
   }

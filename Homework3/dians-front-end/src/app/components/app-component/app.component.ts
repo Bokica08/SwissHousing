@@ -70,7 +70,7 @@ export class AppComponent implements OnInit {
   }
 
   public getEmployees(): void {
-    //debugger
+    
     this.employeeService.getEmployees().subscribe(
       
       (response: Employee[]) => {
@@ -82,11 +82,11 @@ export class AppComponent implements OnInit {
       }
       
     );
-    //debugger
+    
   }
 
   public onAddEmloyee(addForm: NgForm): void {
-    //debugger
+    
     document.getElementById('add-employee-form')!.click();
     this.employeeService.addEmployee(addForm.value).subscribe(
       (response: Employee) => {
@@ -99,11 +99,11 @@ export class AppComponent implements OnInit {
         addForm.reset();
       }
     );
-    //debugger
+    
   }
 
   public onUpdateEmloyee(employee: Employee): void {
-    //debugger
+    
     this.employeeService.updateEmployee(employee.locationId!).subscribe(
       (response: Employee) => {
         console.log(response);
@@ -113,11 +113,11 @@ export class AppComponent implements OnInit {
         alert(error.message);
       }
     );
-    //debugger
+    
   }
 
   public onDeleteEmloyee(employeeId: number): void {
-    //debugger
+    
     this.employeeService.deleteEmployee(employeeId).subscribe(
       (response: void) => {
         console.log(response);
@@ -127,11 +127,11 @@ export class AppComponent implements OnInit {
         alert(error.message);
       }
     );
-    //debugger
+    
   }
 
   public searchEmployees(key: string): void {
-    //debugger
+    
     console.log(key);
     const results: Employee[] = [];
     for (const employee of this.employees) {
@@ -143,13 +143,13 @@ export class AppComponent implements OnInit {
       }
     }
     this.employees = results;
-    //debugger
+    
     if (results.length === 0 || !key) {
       this.getEmployees();
     }
   }
   public searchEmployeesByCity(key: string): void {
-    //debugger
+    
     console.log(key);
     const results: Employee[] = [];
     for (const employee of this.employees) {
@@ -161,7 +161,7 @@ export class AppComponent implements OnInit {
       }
     }
     this.employees = results;
-    //debugger
+    
     if (results.length === 0 || !key) {
       this.getEmployees();
     }
@@ -170,7 +170,7 @@ export class AppComponent implements OnInit {
   
 
   public onOpenModal(employee: any, mode: string): void {
-    //debugger
+    
     const container = document.getElementById('main-container');
     const button = document.createElement('button');
     button.type = 'button';
@@ -187,17 +187,17 @@ export class AppComponent implements OnInit {
       this.deleteEmployee = employee;
       button.setAttribute('data-target', '#deleteEmployeeModal');
     }
-    //debugger
+    
     container!.appendChild(button);
     button.click();
   }
 
   isObject(value: any): boolean { 
-    //debugger
+    
     return typeof value === 'object'; }
 
     logout(): void {
-      //debugger;
+      ;
       this.authService.logout().subscribe({
         next: res => {
           console.log(res);

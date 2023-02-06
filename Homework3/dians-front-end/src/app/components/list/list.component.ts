@@ -32,7 +32,7 @@ export class ListComponent implements OnInit{
 
 
   constructor(private configService:ConfigService,private activateRoute: ActivatedRoute,private httpClient:HttpClient){
-    //debugger;
+    ;
     this.isLoggedIn=this.activateRoute.snapshot.data['data5']
     this.user=this.activateRoute.snapshot.data['data6']
     //this.isLoggedIn = this.storageService.isLoggedIn();
@@ -43,45 +43,29 @@ export class ListComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    //debugger;
+    ;
     this.getEmployees();
     
     //this.isLoggedIn=this.activateRoute.snapshot.data['data5']
     if (this.isLoggedIn) {
-      console.log("if")
       //const user = this.storageService.getUser();
       this.roles = this.user.roles;
-      //debugger
+      
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
       this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
-      //debugger
+      
 
       this.username = this.user.username;
     }else{
-      console.log("else")
       console.log(this.isLoggedIn);
     }
     console.log(this.isLoggedIn);
-    //debugger
+    
   }
 
 
 
-  addEmployee(){
-    console.log("he")
-    this.configService.addEmployee({
-      locationId: null,
-      x: 1, y: 1, name: "Gorjan", 
-      city: "Skopje", street: "jablanica", houseNumber: "1515", description: "Xavi", imagePath: "https://google.com", website: "facebook.com",
-      phoneNumber: "075500000", stars: 5,
-      rating: null,
-      numOfRatings: 0
-    }).subscribe();
-  }
-  deleteEmployee(){
-
-  }
   public getEmployees(): void {
   
     this.configService.getEmployees().subscribe(
@@ -97,12 +81,10 @@ export class ListComponent implements OnInit{
     );
   }
   filter(){
-    console.log("hey")
     console.log(this.filterBy!=null)
     console.log(this.dropDownResult);
     // ako e 
     if(this.filterBy==null || this.filterBy.length==0){
-      console.log("Prv if")
       this.configService.getEmployees().subscribe(
       
         (response: Employee[]) => {
@@ -121,7 +103,6 @@ export class ListComponent implements OnInit{
       }
       // ako e selektirano da bara po city
     }else if(this.dropDownResult==='city'){
-      console.log("Vtor if")
     this.configService.getByCity(this.filterBy).subscribe(
       (response: Employee[]) => {
         this.employees = response;
@@ -134,7 +115,6 @@ export class ListComponent implements OnInit{
     this.showNoResult=false;
     // ako e selektirano da bara po ime
     }else if(this.dropDownResult==='name'){
-      console.log("Tret elif")
       this.configService.getByName(this.filterBy).subscribe(
         (response:Employee[])=>{
           this.employees=response;
@@ -146,7 +126,6 @@ export class ListComponent implements OnInit{
       
       // ako e selektirano da bara po stars
     }else if(this.dropDownResult==='stars'){
-      console.log("Cetvrti elif")
       var noStars = parseInt(this.filterBy)
       if(!Number.isInteger(noStars)){
         
@@ -170,7 +149,6 @@ export class ListComponent implements OnInit{
 
       //ako nema selektirano bara default po ime
     }else{
-      console.log("pet elif")
 
       this.configService.getByName(this.filterBy).subscribe(
         (response:Employee[])=>{
