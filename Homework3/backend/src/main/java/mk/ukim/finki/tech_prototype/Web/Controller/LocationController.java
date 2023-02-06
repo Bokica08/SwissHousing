@@ -33,7 +33,7 @@ public class LocationController {
         if(this.locationService.findById(id).isEmpty()) return ResponseEntity.ok().build();
         return ResponseEntity.badRequest().build();
     }
-    @PostMapping("/grade/{id}")
+    @GetMapping("/grade/{id}")
     public double getGrade(@PathVariable Long id)
     {
         return locationService.getGradeForLocation(id);

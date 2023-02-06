@@ -119,4 +119,8 @@ export class ConfigService {
     queryParams=queryParams.append("locationId",locationId)
     return this.http.get<ListReview[]>(`${this.apiServerUrl}/review/location`,{params:queryParams});
   }
+  public getAvgGrade(id:string):Observable<any>{
+    
+  return  this.http.get<any>("http://localhost:8080/location/grade/"+id);
+}
 }

@@ -14,6 +14,7 @@ import { ListReview } from 'src/app/list-reviews.model';
 export class DetailsGuesthousesComponent implements OnInit{
   guest=new Guest();
   public reviews:ListReview[] | undefined;
+  public avg:any | undefined;
   id:string
   constructor(private httpClient:HttpClient,private route: ActivatedRoute,private configService:ConfigService){}
   ngOnInit(): void {
@@ -32,6 +33,12 @@ export class DetailsGuesthousesComponent implements OnInit{
       
     );
     this.getReviews();
+    this.configService.getAvgGrade(this.id).subscribe(
+      res=>{
+        this.avg=res;
+        console.log(this.avg);
+      }
+    );
   }
 
     addReview(id:string)
